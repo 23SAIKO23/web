@@ -68,3 +68,23 @@
     
 })(jQuery);
 
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const productContainer = document.getElementById('productContainer');
+    const products = Array.from(productContainer.getElementsByClassName('product-item'));
+
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase();
+
+        products.forEach(product => {
+            const productName = product.getAttribute('data-name').toLowerCase();
+            const productDescription = product.querySelector('.product-description').textContent.toLowerCase();
+
+            if (productName.includes(query) || productDescription.includes(query)) {
+                product.style.display = '';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+});
