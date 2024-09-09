@@ -261,13 +261,15 @@ select {
   word-wrap: normal;
 }
 
+/* ... código existente ... */
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: button; /* Eliminar si no es necesario */
+  appearance: button; /* Asegúrate de que esta línea esté presente */
 }
-
+/* ... código existente ... */
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -328,10 +330,13 @@ progress {
   height: auto;
 }
 
+/* ... código existente ... */
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  appearance: none; /* Asegúrate de que esta línea esté presente */
+  -webkit-appearance: none; /* Puedes mantenerlo para compatibilidad con navegadores antiguos */
 }
+/* ... código existente ... */
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -3484,7 +3489,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
+  /* color-adjust: exact; */ /* Eliminar o comentar esta línea */
 }
 
 .custom-control-inline {
@@ -9772,5 +9777,32 @@ h6,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.aclonica-regular {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.aclonica-regular {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.clicker-script-regular {
+  font-family: "Clicker Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
