@@ -9872,4 +9872,38 @@ h6,
 .product-description {
   color: #666;
 }
+/* Contenedor de productos más pequeño */
+.product-item {
+  width: 500px !important; /* Limita el ancho máximo del cuadro */
+  margin: 8 auto 1rem; /* Centra los productos y ajusta el espacio inferior */
+}
+
+/* Tarjeta de producto */
+.product-card {
+  border: 1px solid #ddd; /* Borde ligero para delimitar el cuadro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px; /* Reducir el padding interno */
+  text-align: center; /* Centrar contenido dentro de la tarjeta */
+  height: auto; /* Asegura que todas las tarjetas tengan la misma altura */
+  background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Imágenes de productos más pequeñas */
+.product-image {
+  width: 100%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+  height: auto; /* Mantener proporciones */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Tamaño del nombre del producto */
+.product-name {
+  font-size: 1rem; /* Reducir el tamaño del nombre */
+  margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Tamaño de la descripción */
+.product-description {
+  font-size: 0.875rem; /* Reducir el tamaño de la descripción */
+  color: #666;
+}
 

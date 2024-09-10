@@ -70,21 +70,22 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
-    const productContainer = document.getElementById('productContainer');
-    const products = Array.from(productContainer.getElementsByClassName('product-item'));
+    const products = Array.from(document.getElementsByClassName('product-item'));
 
     searchInput.addEventListener('input', function() {
-        const query = searchInput.value.toLowerCase();
+        const query = searchInput.value.toLowerCase().trim(); // Convertimos el valor a minúsculas y eliminamos espacios innecesarios
 
         products.forEach(product => {
-            const productName = product.getAttribute('data-name').toLowerCase();
-            const productDescription = product.querySelector('.product-description').textContent.toLowerCase();
+            const productName = product.getAttribute('data-name').toLowerCase(); // Tomamos el nombre en el atributo data-name
+            const productDisplayName = product.querySelector('.product-name').textContent.toLowerCase(); // Buscamos el nombre dentro del HTML
 
-            if (productName.includes(query) || productDescription.includes(query)) {
-                product.style.display = '';
+            // Comparamos el nombre del producto con la búsqueda
+            if (productName.includes(query) || productDisplayName.includes(query)) {
+                product.style.display = 'block'; // Mostramos el producto si coincide
             } else {
-                product.style.display = 'none';
+                product.style.display = 'none'; // Ocultamos el producto si no coincide
             }
         });
     });
 });
+
