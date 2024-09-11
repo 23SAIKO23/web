@@ -26,6 +26,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 
 <body>
@@ -117,31 +119,36 @@
     <!-- Header End -->
         <!-- Booking Start -->
     <div class="container-fluid booking mt-5 pb-5" style="max-width: 70%; margin: auto;"></div>
-    <div class="container pb-5">
+    <div class="container pb-5" data-aos="fade-in" data-aos-duration="1000">
         <div class="bg-light shadow" style="padding: 30px;">
             <div class="row align-items-center justify-content-center" style="min-height: 60px; text-align: center;">
                 <h3 class="playwrite-cu-a">"Trabajamos con pasión para cuidar tu salud"</h3>
             </div>
         </div>
     </div>
-</div>
+    <script>
+        AOS.init({
+          duration: 1000, // Duración de la animación en milisegundos
+          once: true, // Animar solo una vez
+        });
+      </script>    
+    </div>
 <!-- Booking End -->
  <!-- About Start -->
  <div class="container-fluid py-5">
     <div class="container pt-5">
         <div class="row">
-            <div class="col-lg-6" style="min-height: 500px;">
+            <div class="col-lg-6" style="min-height: 500px;" data-aos="fade-right" data-aos-duration="1000">
                 <div class="position-relative h-100">
                     <img class="position-absolute w-100 h-100" src="img/capa.jpeg" style="object-fit: cover;">
                 </div>
             </div>
-            <div class="col-lg-6 pt-5 pb-lg-5">
-                <div class="about-text p-4 p-lg-5 my-lg-5" style="background-color: 
-#91BF2C;">
+            <div class="col-lg-6 pt-5 pb-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                <div class="about-text p-4 p-lg-5 my-lg-5" style="background-color:#91BF2C;">
                     <h6 class="text-white text-uppercase" style="letter-spacing: 5px;">Sobre Nosotros</h6>
                     <h2 class="mb-3 text-white">Capacitaciones Constantes</h2>
                     <p class="text-white">Nuestro compromiso con la calidad no solo se refleja en los productos que distribuimos, sino también en el desarrollo continuo de nuestro equipo. Realizamos capacitaciones constantes para asegurar que nuestro personal esté siempre actualizado con las mejores prácticas y tecnologías del sector, garantizando así un servicio de excelencia.</p>
-                    <div class="row mb-4">
+                    <div class="row mb-4" data-aos="fade-up" data-aos-duration="1000">
                         <div class="col-6">
                             <img class="img-fluid" src="img/capacitaciones.jpeg" alt="Distribución de Productos Farmacéuticos">
                         </div>
@@ -151,6 +158,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
             
         </div>
     </div>
@@ -184,12 +193,12 @@
 <div class="container-fluid py-5 esquema-organizacional">
     <div class="container text-center">
         <!-- Título del esquema organizacional -->
-        <h2 class="esquema-titulo">Distribución Organizacional</h2>
+        <h2 class="esquema-titulo" data-aos="fade-down" data-aos-duration="1000">Distribución Organizacional</h2>
         <h3 class="esquema-subtitulo"></h3>
-
+    
         <div class="row justify-content-center">
             <!-- Primer nivel: Gerencia -->
-            <div class="col-lg-12 mb-5">
+            <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-4 bg-warning text-dark rounded shadow-box text-center hover-transform">
                     <div class="image-container">
                         <img src="img/doc.jpg" alt="Gerencia" class="img-fluid rounded-circle">
@@ -197,9 +206,9 @@
                     <h4>Gerencia</h4>
                 </div>
             </div>
-
+    
             <!-- Segundo nivel: Áreas principales -->
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-3 mb-4" data-aos="fade-right" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-orange rounded shadow-box text-center hover-transform">
                     <div class="image-container">
                         <img src="img/doc.jpg" alt="Ventas" class="img-fluid rounded-circle">
@@ -207,7 +216,7 @@
                     <h5 style="color: orange;">Ventas</h5>
                 </div>
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-primary rounded shadow-box text-center hover-transform">
                     <div class="image-container">
                         <img src="/img/doc.jpg" alt="Regencia" class="img-fluid rounded-circle">
@@ -215,7 +224,7 @@
                     <h5 style="color: #007bff;">Regencia</h5>
                 </div>
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-success rounded shadow-box text-center hover-transform">
                     <div class="image-container">
                         <img src="img/doc.jpg" alt="Logística" class="img-fluid rounded-circle">
@@ -223,7 +232,7 @@
                     <h5 style="color: #28a745;">Logística</h5>
                 </div>
             </div>
-            <div class="col-lg-3 mb-4">
+            <div class="col-lg-3 mb-4" data-aos="fade-left" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-success rounded shadow-box text-center hover-transform">
                     <div class="image-container">
                         <img src="img/doc.jpg" alt="Finanzas" class="img-fluid rounded-circle">
@@ -231,10 +240,10 @@
                     <h5 style="color: #8DC63F;">Finanzas</h5>
                 </div>
             </div>
-
+    
             <!-- Tercer nivel: Subniveles dentro de cada área -->
             <!-- Ventas -->
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
                         <img src="/img/doc.jpg" alt="Vendedor La Paz" class="img-fluid rounded-circle">
@@ -278,9 +287,9 @@
                     <h6>Vendedor Sucre (1)</h6>
                 </div>
             </div>
-
+    
             <!-- Regencia -->
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-primary rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
                         <img src="img/team-3.jpg" alt="Regente La Paz-El Alto" class="img-fluid rounded-circle">
@@ -306,9 +315,9 @@
                     <h6>Regente Oruro (1)</h6>
                 </div>
             </div>
-
+    
             <!-- Logística -->
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-success rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
                         <img src="img/team-3.jpg" alt="Repartidor La Paz-El Alto" class="img-fluid rounded-circle">
@@ -316,9 +325,9 @@
                     <h6>Repartidor La Paz-El Alto (2)</h6>
                 </div>
             </div>
-
+    
             <!-- Finanzas -->
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-success rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
                         <img src="img/team-3.jpg" alt="Contador Nacional" class="img-fluid rounded-circle">
@@ -328,6 +337,8 @@
             </div>
         </div>
     </div>
+    
+    
 </div>
 <!-- Esquema Organizacional End -->
 
