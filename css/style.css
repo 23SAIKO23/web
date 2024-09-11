@@ -4,6 +4,75 @@
   font-weight: auto;
   font-style: normal;
 }
+/* Estilos del esquema organizacional */
+.esquema-organizacional {
+  background-color: #f3f6f9;
+}
+
+.esquema-titulo {
+  color: #2A5C9D;
+  letter-spacing: 5px;
+}
+
+.esquema-subtitulo {
+  color: #8DC63F;
+}
+
+/* Estilos adicionales */
+.shadow-box {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-transform:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.border-orange {
+  border: 2px solid orange;
+}
+
+.border-primary {
+  border: 2px solid #007bff;
+}
+
+.border-success {
+  border: 2px solid #28a745;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.rounded {
+  border-radius: 0.5rem !important;
+}
+
+h6 {
+  font-weight: 600;
+}
+
+/* Estilos para la imagen */
+.image-container {
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  width: 80px; /* Tamaño reducido de la imagen */
+  height: 80px; /* Tamaño reducido de la imagen */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
 
 :root {
   --blue: #007bff;
