@@ -1,95 +1,205 @@
-<!-- Mapa de Bolivia con puntos -->
-<div id="Mapa" class="container-fluid">
-    <h2 class="text-center mt-3">Nuestra Presencia en Bolivia</h2>
-    <div class="map-container">
-        <img src="img/Bol.png" alt="Mapa de Bolivia" style="max-width: 100%; height: auto;">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Bolivia con Puntos</title>
+    <style>
+        /* Estilos del contenedor del mapa */
+        .map-container {
+            position: relative;
+            text-align: center;
+            width: 100%; /* Cambiado a 100% para que sea responsivo */
+            max-width: 800px; /* Tamaño máximo para mantener un límite */
+            height: auto; /* Ajustar automáticamente la altura */
+            margin: 0 auto;
+            overflow: hidden; /* Asegura que nada se salga del contenedor */
+        }
+
+        /* Centrar y justificación del texto */
+        h2 {
+            text-align: center;
+        }
+
+        /* Estilos de la imagen del mapa */
+        .map-container img {
+            width: 100%; /* Mantiene la imagen dentro del contenedor */
+            height: auto; /* Ajusta la altura automáticamente */
+            display: block;
+            margin: 0 auto; /* Centra la imagen */
+        }
+
+        /* Estilos de los puntos en el mapa */
+        .map-point {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: top 0.3s ease; /* Transición suave al cambiar la posición vertical */
+        }
+
+        /* Puntos en el mapa con posiciones fijas */
+        .map-point.el-alto {
+            top: 45%;
+            left: 29%;
+        }
+
+        .map-point.la-paz {
+            top: 50%;
+            left: 30%;
+        }
+
+        .map-point.oruro {
+            top: 70%;
+            left: 33%;
+        }
+
+        .map-point.beni {
+            top: 28%;
+            left: 33%;
+        }
+
+        .map-point.pando {
+            top: 38%;
+            left: 42%;
+        }
+
+        .map-point.cochabamba {
+            top: 60%;
+            left: 42%;
+        }
+
+        .map-point.santa-cruz {
+            top: 62%;
+            left: 56%;
+        }
+
+        .map-point.sucre {
+            top: 77%;
+            left: 46%;
+        }
+
+        .map-point.potosi {
+            top: 80%;
+            left: 37%;
+        }
+
+        .map-point.tarija {
+            top: 85%;
+            left: 50%;
+        }
+
+        /* Estilos del tooltip */
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+
+        /* Ajustes responsivos para pantallas más pequeñas */
+        @media (max-width: 800px) {
+            .map-point.la-paz {
+                top: 53%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.beni {
+                top: 32%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.pando {
+                top: 42%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.cochabamba {
+                top: 62%; /* Ajustar posición hacia abajo */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .map-point.la-paz {
+                top: 54%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.beni {
+                top: 35%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.pando {
+                top: 44%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.cochabamba {
+                top: 63%; /* Ajustar posición hacia abajo */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .map-point.la-paz {
+                top: 55%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.beni {
+                top: 38%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.pando {
+                top: 46%; /* Ajustar posición hacia abajo */
+            }
+
+            .map-point.cochabamba {
+                top: 64%; /* Ajustar posición hacia abajo */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Mapa" class="map-container">
+        <h2 class="text-center mt-3">Nuestra Presencia en Bolivia</h2>
+        <img src="img/Bol.png" alt="Mapa de Bolivia">
 
         <!-- Puntos de ubicación -->
-        <style>
-            .map-container {
-                position: relative; /* Permite que los puntos se posicionen relativos a este contenedor */
-                text-align: center; /* Centra la imagen horizontalmente */
-                display: flex; /* Usar flexbox para centrar verticalmente */
-                justify-content: center; /* Centra horizontalmente */  
-                height: 60%; /* Cambia a auto para que ajuste a la imagen */
-                margin-top: 0; /* Elimina el espacio en la parte superior */
-                margin-bottom: 0; /* Elimina el espacio en la parte inferior */
-            }
+        <div class="map-point el-alto" onmouseover="showTooltip(event, 'El Alto', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point la-paz" onmouseover="showTooltip(event, 'La Paz', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point oruro" onmouseover="showTooltip(event, 'Oruro', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point beni" onmouseover="showTooltip(event, 'Beni', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point pando" onmouseover="showTooltip(event, 'Pando', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point cochabamba" onmouseover="showTooltip(event, 'Cochabamba', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point santa-cruz" onmouseover="showTooltip(event, 'Santa Cruz', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point sucre" onmouseover="showTooltip(event, 'Sucre', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point potosi" onmouseover="showTooltip(event, 'Potosí', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
+        <div class="map-point tarija" onmouseover="showTooltip(event, 'Tarija', 'img/pastilla.jpeg', 'holass')" onmouseout="hideTooltip()"></div>
 
-            .map-container img {
-                max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
-                height: auto; /* Asegúrate de que la imagen mantenga su proporción */
-                display: block; /* Elimina el espacio en la parte inferior */
-            }
-
-            .map-point {
-                position: absolute; /* Posición absoluta para los puntos */
-                width: 10px; /* Ajusta el tamaño del punto */
-                height: 10px; /* Ajusta el tamaño del punto */
-                background-color: red; /* Color del punto */
-                border-radius: 50%; /* Hace que el punto sea redondo */
-                transform: translate(-50%, -50%); /* Centra el punto */
-                cursor: pointer; /* Cambia el cursor al pasar sobre el punto */
-            }
-
-            .tooltip {
-                display: none; /* Oculta el tooltip por defecto */
-                position: absolute; /* Posición absoluta para el tooltip */
-                background-color: white; /* Color de fondo del tooltip */
-                border: 1px solid #ccc; /* Borde del tooltip */
-                padding: 10px; /* Espaciado interior del tooltip */
-                z-index: 10; /* Índice z para asegurar que el tooltip está encima de otros elementos */
-                max-width: 200px; /* Ancho máximo del tooltip */
-                border-radius: 10px; /* Radio de borde para redondear el tooltip */
-            }
-        </style>
-
-        <div class="map-point" style="top: 40%; left: 38%;"
-            onmouseover="showTooltip(event, 'El Alto', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <!-- Punto rojo para El Alto -->
-        <div class="map-point" style="top: 45%; left: 39%;"
-            onmouseover="showTooltip(event, 'La Paz', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 63%; left: 41%;"
-            onmouseover="showTooltip(event, 'Oruro', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 15%; left: 42%;"
-            onmouseover="showTooltip(event, 'Beni', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 29%; left: 46%;"
-            onmouseover="showTooltip(event, 'Pando', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 52%; left: 46%;"
-            onmouseover="showTooltip(event, 'Cochabamba', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()">
-        </div>
-        <div class="map-point" style="top: 50%; left: 53%;"
-            onmouseover="showTooltip(event, 'Santa Cruz', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()">
-        </div>
-        <div class="map-point" style="top: 70%; left: 49%;"
-            onmouseover="showTooltip(event, 'Sucre', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 78%; left: 43%;"
-            onmouseover="showTooltip(event, 'Potosi', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 80%; left: 50%;"
-            onmouseover="showTooltip(event, 'Tarija', 'img/pastilla.jpeg','holass')" onmouseout="hideTooltip()"></div>
-        <div id="tooltip" class="tooltip"></div> <!-- Tooltip para mostrar información -->
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip"></div>
     </div>
-</div>
 
-<script>
-    AOS.init({
-        duration: 1000, // Duración de la animación en milisegundos
-        once: true, // Animar solo una vez
-    });
+    <script>
+        // Función para mostrar el tooltip
+        function showTooltip(event, name, imageUrl, description) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = `<strong>${name}</strong><br><img src="${imageUrl}" alt="${name}" style="width: 50px;"><br>${description}`;
+            tooltip.style.display = 'block';
+            tooltip.style.left = `${event.pageX + 10}px`; // Espaciado a la derecha del mouse
+            tooltip.style.top = `${event.pageY + 10}px`; // Espaciado por debajo del mouse
+        }
 
-    function showTooltip(event, name, imgSrc, description) {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.innerHTML = `<strong>${name}</strong><br><img src="${imgSrc}" alt="${name}" style="width: 100%;"><br>${description}`; // Contenido del tooltip
-        tooltip.style.display = 'block';
-        tooltip.style.left = `${event.pageX + 10}px`; // Posición del tooltip
-        tooltip.style.top = `${event.pageY + 10}px`;
-    }
+        // Función para ocultar el tooltip
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        }
+    </script>
+</body>
 
-    function hideTooltip() {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.style.display = 'none'; // Oculta el tooltip
-    }
-</script>
-   <!-- Footer Start -->
-  
-   <!-- Footer End -->
+</html>
+

@@ -133,14 +133,14 @@
     </div>
     <script>
         AOS.init({
-          duration: 1000, // Duración de la animación en milisegundos
-          once: true, // Animar solo una vez
+            duration: 1000, // Duración de la animación en milisegundos
+            once: true, // Animar solo una vez
         });
-      </script>    
-    </div>
-    <!-- Booking End -->
-    <h2 class="text-center mt-3">Linea de Vida</h2>
-    <!-- Linea de Vida -->
+    </script>
+    
+    <h2 class="text-center mt-3">Línea de Vida</h2>
+    
+    <!-- Línea de Vida -->
     <style>
         .timeline {
             position: relative;
@@ -148,7 +148,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
+    
         .timeline::before {
             content: '';
             position: absolute;
@@ -159,7 +159,7 @@
             height: 100%;
             background-color: #ddd;
         }
-
+    
         .timeline-item {
             position: relative;
             width: 50%;
@@ -169,7 +169,7 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
+    
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -181,7 +181,7 @@
             background-color: #ddd;
             border-radius: 50%;
         }
-
+    
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -194,59 +194,69 @@
             border-bottom: 15px solid transparent;
             border-left: 15px solid #ddd;
         }
-
+    
         .timeline-item.left {
             left: 0;
             transform: translateX(-50%);
         }
-
+    
         .timeline-item.right {
             right: 0;
             transform: translateX(50%);
         }
-
+    
         .timeline-item.right::after {
             border-left: 15px solid #ddd;
         }
-
+    
         .timeline-item.left::after {
             border-right: 15px solid #ddd;
         }
-
+    
         .timeline-item img {
             max-width: 100%;
             border-radius: 5px;
         }
-
+    
         .timeline-item p {
             margin-top: 10px;
         }
-
+    
         .timeline-item h3 {
             margin-top: 0;
         }
-
+    
+        /* Responsividad */
         @media (max-width: 768px) {
-            .timeline-item {
-                width: 100%;
+            .timeline {
+                width: 100%; /* Ajustar el ancho de la línea de tiempo al 100% en pantallas pequeñas */
             }
-
+    
+            .timeline-item {
+                width: 90%; /* Asegurar que los elementos de la línea de tiempo ocupen el 90% del ancho */
+                margin: 20px auto; /* Espacio vertical entre elementos */
+                text-align: left; /* Alinear el texto a la izquierda para móviles */
+            }
+    
             .timeline-item.left,
             .timeline-item.right {
-                float: none;
-                text-align: center;
+                width: 100%; /* Asegurar que todos los elementos de la línea de tiempo ocupen el 100% en móviles */
+                left: 0; /* Alinear todos los elementos a la izquierda */
+                right: 0; /* Alinear todos los elementos a la izquierda */
+                transform: none; /* Sin transformación para alineación adecuada */
             }
-
+    
             .timeline::before {
-                left: 0;
+                left: 0; /* Ajustar la línea central a la izquierda en pantallas pequeñas */
             }
-
+    
             .timeline-item::after {
-                display: none;
+                display: none; /* Ocultamos las flechas en pantallas pequeñas */
             }
         }
+        
     </style>
-
+    
     <div class="aos-init" data-aos="fade-up">
         <div class="timeline">
             <div class="timeline-item left">
@@ -279,15 +289,16 @@
             </div>
         </div>
     </div>
-    </div>
-    <!-- Linea de Vida End -->
-    <iframe src="mapa.html" style="width: 100%; height: 760px; border: none; position: relative; z-index: 9999; opacity: 0; transition: opacity 1s ease-in-out;" class="w-100"></iframe> <!-- Ajustado para evitar errores con ventanas emergentes -->
+    
+    <!-- Iframe del mapa, completamente responsivo -->
+    <iframe src="mapa.html" style="width: 100%; height: 760px; border: none; position: relative; z-index: 9999; opacity: 0; transition: opacity 1s ease-in-out;" class="w-100"></iframe>
     <script>
         document.querySelector('iframe').addEventListener('mouseover', function() {
             this.style.opacity = 1;
         });
     </script>
-
+    
+    
     <!-- Mapa -->
    
     <!-- Mapa End -->
