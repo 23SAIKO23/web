@@ -69,8 +69,15 @@
             transition: opacity 0.2s ease;
             overflow: hidden; /* Asegura que el contenido no desborde */
             text-align: center; /* Centra el texto en el tooltip */
-            max-height: 1000px; /* Establecer una altura máxima para el tooltip */
+            max-height: 300px; /* Establecer una altura máxima para el tooltip */
             overflow-y: auto; /* Permitir desplazamiento si el contenido excede la altura máxima */
+        }
+
+        /* Estilo de las imágenes dentro del tooltip */
+        .tooltip img {
+            width: 100%; /* Asegura que la imagen dentro del tooltip sea responsiva */
+            height: auto; /* Ajusta la altura automáticamente */
+            max-height: 100px; /* Altura máxima para las imágenes en el tooltip */
         }
     </style>
 </head>
@@ -119,7 +126,7 @@
         // Mostrar tooltip al pasar sobre el punto
         function showTooltip(event, element, name, imgSrc, description, isBeni = false) {
             const tooltip = document.getElementById('tooltip');
-            tooltip.innerHTML = `<strong>${name}</strong><br><img src="${imgSrc}" alt="${name}" style="width: 100%;"><br>${description}`;
+            tooltip.innerHTML = `<strong>${name}</strong><br><img src="${imgSrc}" alt="${name}"><br>${description}`;
             tooltip.style.display = 'block';
 
             // Ajusta la posición del tooltip justo encima del punto rojo
