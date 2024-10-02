@@ -9980,3 +9980,56 @@ h6,
   color: #666;
 }
 
+.destination-item {
+  text-align: center; /* Alinear contenido al centro */
+}
+
+.destination-item img {
+  display: block; /* Asegura que la imagen se comporte como un bloque */
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+
+
+
+
+
+
+
+
+.contact-form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ajusta según sea necesario */
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #128C7E;
+}
+
