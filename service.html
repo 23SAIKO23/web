@@ -136,19 +136,46 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="laPazElAlto">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">La Paz - El Alto</h5>
-                        <p class="m-0">La Paz - El Alto: Av. del Policía 553 Edificio Montenegro 2do. Piso -Ciudad Satélite</p>
+                        <p class="m-0">La Paz - El Alto: Av. del Policía 553 Edificio Montenegro 2do. Piso - Ciudad Satélite</p>
                     </div>
                 </div>
+                
+                <script>
+                    // Asignar evento click con JavaScript
+                    document.getElementById('laPazElAlto').addEventListener('click', function() {
+                        // URL de Google Maps con la dirección
+                        const address = "Av. del Policía 553 Edificio Montenegro 2do. Piso, Ciudad Satélite, La Paz - El Alto";
+                        const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+                        window.open(mapUrl, '_blank'); // Abre la URL en una nueva pestaña
+
+                    }
+                );
+                </script>
+                
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="oruroLocation">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">Oruro</h5>
                         <p class="m-0">Calle Pagador 6338 entre Calles Murguia y Aldaa Edificio Cámara de Minería 2do piso.</p>
                     </div>
                 </div>
+                
+                <script>
+                    // Manejador de eventos solo para Oruro
+                    document.getElementById('oruroLocation').addEventListener('click', function() {
+                        const address = "Calle Pagador 6338 entre Calles Murguia y Aldaa, Edificio Cámara de Minería, Oruro";
+                        const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
+                    });
+                </script>
+                
+
+                
+
+               
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
