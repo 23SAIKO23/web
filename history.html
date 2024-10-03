@@ -31,6 +31,7 @@
 </head>
 
 <body>
+   
     <!-- Topbar Start -->
 <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
@@ -73,6 +74,7 @@
                     <h1 class="m-0 text-primary animate__animated animate__slideInRight animate__slow">
                         <span class="text-dark">SODI</span>PHAR
                         <small class="small-corporation">corporation s.r.l</small>
+                        <span class="text-dark">SODI</span>PHAR
                     </h1>
                     <img class="animate__animated animate__slideInLeft animate__slow" src="img/sin fondo.png" alt="Logo" style="max-width: 70px;">
                 </div>
@@ -110,6 +112,8 @@
 
 
     <!-- Header Start -->
+   
+    
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
@@ -138,9 +142,8 @@
             once: true, // Animar solo una vez
         });
     </script>
-    
-    <h2 class="text-center mt-3">Línea de Vida</h2>
-    
+    <h2 class="text-center mt-3" id="lineaDeVida">Línea de Vida</h2>
+
     <!-- Línea de Vida -->
     <style>
         .timeline {
@@ -148,6 +151,7 @@
             width: 80%;
             max-width: 800px;
             margin: 0 auto;
+            padding-top: 80px; /* Espacio para el video */
         }
     
         .timeline::before {
@@ -169,14 +173,21 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
         }
     
-        .timeline-item::before {
+        .timeline-item::before,
+        .timeline-item::after {
             content: '';
             position: absolute;
             left: 50%;
             top: -15px;
             transform: translateX(-50%);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+    
+        .timeline-item::before {
             width: 10px;
             height: 10px;
             background-color: #ddd;
@@ -184,15 +195,8 @@
         }
     
         .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: -15px;
-            transform: translateX(-50%);
             width: 0;
             height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
             border-left: 15px solid #ddd;
         }
     
@@ -217,6 +221,7 @@
         .timeline-item img {
             max-width: 100%;
             border-radius: 5px;
+            margin-bottom: 15px; /* Margen aplicado aquí en lugar de en el estilo en línea */
         }
     
         .timeline-item p {
@@ -227,75 +232,102 @@
             margin-top: 0;
         }
     
+        .video-container {
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+            margin: 20px;
+            float: left; /* Para alinear a la izquierda */
+        }
+    
         /* Responsividad */
         @media (max-width: 768px) {
             .timeline {
-                width: 100%; /* Ajustar el ancho de la línea de tiempo al 100% en pantallas pequeñas */
+                width: 100%;
             }
     
             .timeline-item {
-                width: 90%; /* Asegurar que los elementos de la línea de tiempo ocupen el 90% del ancho */
-                margin: 20px auto; /* Espacio vertical entre elementos */
-                text-align: left; /* Alinear el texto a la izquierda para móviles */
+                width: 90%;
+                margin: 20px auto;
+                text-align: left;
             }
     
             .timeline-item.left,
             .timeline-item.right {
-                width: 100%; /* Asegurar que todos los elementos de la línea de tiempo ocupen el 100% en móviles */
-                left: 0; /* Alinear todos los elementos a la izquierda */
-                right: 0; /* Alinear todos los elementos a la izquierda */
-                transform: none; /* Sin transformación para alineación adecuada */
+                width: 100%;
+                left: 0;
+                right: 0;
+                transform: none;
             }
     
             .timeline::before {
-                left: 0; /* Ajustar la línea central a la izquierda en pantallas pequeñas */
+                left: 0;
             }
     
             .timeline-item::after {
-                display: none; /* Ocultamos las flechas en pantallas pequeñas */
+                display: none;
+            }
+    
+            .video-container {
+                display: none; /* Ocultar el video en dispositivos móviles */
             }
         }
     </style>
     
     <div class="aos-init" data-aos="fade-up">
+        <div class="video-container">
+            <video width="170" height="360" controls autoplay>
+                <source src="/img/historia.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
         <div class="timeline">
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2003</h3>
                 <p>Cumbia 18 Kilates es una agrupación musical originaria de Bolivia, conocida por su fusión de cumbia con ritmos latinoamericanos. Fundada en la década de 1990, se ha destacado por su estilo enérgico y sus letras que abordan temas de amor y la vida cotidiana. Su éxito "La Cumbia de la Cerveza" se ha convertido en un himno en muchas fiestas y celebraciones.</p>
             </div>
-            <div class="timeline-item right">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item right" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2004</h3>
                 <p>Formados en 1976 en Iztapalapa, México, Los Ángeles Azules son pioneros de la cumbia sonidera. Con su característico sonido de acordeón y metales, han logrado popularizar la cumbia a nivel internacional. Canciones como "Cómo Te Voy a Olvidar" y "El Listón de Tu Pelo" son clásicos que siguen siendo bailados en fiestas y eventos.</p>
             </div>
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2005</h3>
                 <p>Nene Malo es un cantante argentino conocido por ser uno de los referentes de la cumbia villera, un subgénero de la cumbia que surgió en las villas y barrios populares de Argentina en los años 2000. Con letras que reflejan la vida cotidiana y las realidades sociales, su tema más famoso, "La Cumbia de los Trapos", captura la esencia del fervor barrial y la pasión por el fútbol. Su estilo crudo y auténtico ha resonado con muchos jóvenes en el país.</p>
             </div>
-            <div class="timeline-item right">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item right" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2006</h3>
                 <p>Formada en 2000, Damas Gratis es una de las bandas más representativas de la cumbia villera. Liderada por el cantante Pablo Lescano, su música combina ritmos pegajosos con letras que hablan sobre el amor y la vida en los barrios. Temas como "La Cumbia de los Trapos" y "Los Dueños del Pabellón" han sido grandes éxitos, convirtiendo a la banda en un ícono de la cumbia argentina.</p>
             </div>
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2007</h3>
                 <p>La Banda de Lechuga es un grupo de cumbia villera argentino, conocido por su estilo fresco y divertido. Formados a principios de los 2000, han logrado captar la atención del público joven con letras que abordan temas de la vida en los barrios y el amor. Sus presentaciones en vivo son enérgicas y llenas de humor, lo que los ha convertido en favoritos en fiestas y eventos.</p>
             </div>
-            <div class="timeline-item right">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item right" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2008</h3>
                 <p>El Polaco, cuyo nombre real es Ezequiel Iván Cwirkaluk, es un cantante de cumbia argentina que comenzó su carrera musical en el ambiente de la cumbia villera. Conocido por su estilo carismático y letras pegajosas, ha tenido éxitos como "La Cumbia de los Trapos" y "Que Te Vaya Bonito". Su popularidad ha crecido a lo largo de los años, convirtiéndose en uno de los referentes de la cumbia moderna.</p>
             </div>
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2009</h3>
                 <p>Diego Ríos es un cantante y compositor argentino, conocido por su trabajo en el género de la cumbia. A lo largo de su carrera, ha lanzado numerosos temas que han resonado con el público, como "El Amigo" y "La Cumbia de los Perros". Su estilo alegre y su habilidad para conectar con la audiencia lo han consolidado como un artista querido en la escena musical de la cumbia.</p>
             </div>
         </div>
     </div>
+    
+    <script>
+        function scrollToTitle() {
+            const title = document.getElementById('lineaDeVida');
+            title.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    
+
     <style>
         body, html {
             margin: 0;
