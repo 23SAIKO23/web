@@ -10035,3 +10035,13 @@ h6,
   background-color: #128C7E;
 }
 
+.small-corporation {
+  font-size: 1rem; /* Tamaño de fuente más pequeño */
+  color: #343a40; /* Color oscuro */
+  display: block; /* Asegura que esté en una nueva línea */
+  font-weight: normal; /* Peso de la fuente normal */
+  text-align: center; /* Centrar el texto */
+  letter-spacing: 3px; /* Espaciado entre letras */
+}
+
+

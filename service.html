@@ -72,7 +72,8 @@
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1 class="m-0 text-primary animate__animated animate__slideInRight animate__slow">
-                        <span class="text-dark">SODIP</span>HAR
+                        <span class="text-dark">SODI</span>PHAR
+                        <small class="small-corporation">corporation s.r.l</small>
                     </h1>
                     <img class="animate__animated animate__slideInLeft animate__slow" src="img/sin fondo.png" alt="Logo" style="max-width: 70px;">
                 </div>
@@ -154,49 +155,71 @@
                     }
                 );
                 </script>
-                
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4" id="oruroLocation">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">Oruro</h5>
-                        <p class="m-0">Calle Pagador 6338 entre Calles Murguia y Aldaa Edificio Cámara de Minería 2do piso.</p>
+                        <p class="m-0">Calle Pagador 6338 entre Calles Murguia y Aldaa, Edificio Cámara de Minería, 2do piso.</p>
                     </div>
                 </div>
                 
                 <script>
                     // Manejador de eventos solo para Oruro
                     document.getElementById('oruroLocation').addEventListener('click', function() {
-                        const address = "Calle Pagador 6338 entre Calles Murguia y Aldaa, Edificio Cámara de Minería, Oruro";
-                        const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+                        const mapUrl = "https://www.google.com/maps/place/2VGQ%2BJFH,+Oruro/@-17.9738804,-67.111019,17.25z/data=!4m5!3m4!1s0x93e2b0a1fdff86f5:0xc2628ace1562e1ad!8m2!3d-17.9734375!4d-67.1112656!5m1!1e4?hl=es&entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D";
                         window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
                     });
                 </script>
-                
 
-                
-
-               
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="cochabambaLocation">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">Cochabamba</h5>
                         <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                     </div>
                 </div>
+
+                <script>
+                    // Manejador de eventos solo para Cochabamba
+                    document.getElementById('cochabambaLocation').addEventListener('click', function() {
+                        const mapUrl = "https://www.google.com/maps/place/J.Arauco+275e,+Cochabamba/@-17.3895001,-66.1464765,17z/data=!4m6!3m5!1s0x93e37400a0a8564f:0x9c96cc3ccbe65354!8m2!3d-17.3894378!4d-66.1463015!16s%2Fg%2F11fst62x8g!5m1!1e4?hl=es&entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D";
+                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
+                    });
+                </script>
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="trinidadLocation">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Beni</h5>
-                        <p class="m-0">Calle 18 de noviembre esquina calle La Paz Nro. 113 2do. piso</p>
+                        <h5 class="mb-2">Trinidad</h5>
+                        <p class="m-0">Calle 18 de noviembre esquina calle La Paz Nro. 113, 2do piso</p>
                     </div>
                 </div>
+                
+                <script>
+                    // Manejador de eventos solo para Trinidad
+                    document.getElementById('trinidadLocation').addEventListener('click', function() {
+                        const mapUrl = "https://www.google.com/maps/place/C.+La+Paz+192,+Trinidad/@-14.836454,-64.9063927,17z/data=!4m6!3m5!1s0x93dd702a09117221:0x80f7e597dbd460c3!8m2!3d-14.8364558!4d-64.9062007!16s%2Fg%2F11rzgv9v5l!5m1!1e4?hl=es&entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D";
+                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
+                    });
+                </script>
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="santaCruzLocation">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Pando</h5>
+                        <h5 class="mb-2">Santa Cruz</h5>
                         <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                     </div>
                 </div>
+                
+                <script>
+                    // Manejador de eventos solo para Santa Cruz
+                    document.getElementById('santaCruzLocation').addEventListener('click', function() {
+                        const mapUrl = "https://www.google.com/maps/place/Av.+San+Martin+1300,+Santa+Cruz+de+la+Sierra/@-17.7614503,-63.1978538,17z/data=!4m6!3m5!1s0x93f1e7f6ae59137d:0x704d627eb30dbd2";
+                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
+                    });
+                </script>
+                
+ 
+
+
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
@@ -221,7 +244,7 @@
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="900">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Santa Cruz</h5>
+                        <h5 class="mb-2">Pando</h5>
                         <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                     </div>
                 </div>
