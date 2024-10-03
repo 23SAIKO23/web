@@ -31,6 +31,7 @@
 </head>
 
 <body>
+   
     <!-- Topbar Start -->
 <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
@@ -71,7 +72,7 @@
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1 class="m-0 text-primary animate__animated animate__slideInRight animate__slow">
-                        <span class="text-dark">SODIP</span>HAR
+                        <span class="text-dark">SODI</span>PHAR
                     </h1>
                     <img class="animate__animated animate__slideInLeft animate__slow" src="img/sin fondo.png" alt="Logo" style="max-width: 70px;">
                 </div>
@@ -109,6 +110,8 @@
 
 
     <!-- Header Start -->
+   
+    
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
@@ -137,9 +140,8 @@
             once: true, // Animar solo una vez
         });
     </script>
-    
-    <h2 class="text-center mt-3">Línea de Vida</h2>
-    
+    <h2 class="text-center mt-3" id="lineaDeVida">Línea de Vida</h2>
+
     <!-- Línea de Vida -->
     <style>
         .timeline {
@@ -147,6 +149,7 @@
             width: 80%;
             max-width: 800px;
             margin: 0 auto;
+            padding-top: 80px; /* Espacio para el video */
         }
     
         .timeline::before {
@@ -168,14 +171,21 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
         }
     
-        .timeline-item::before {
+        .timeline-item::before,
+        .timeline-item::after {
             content: '';
             position: absolute;
             left: 50%;
             top: -15px;
             transform: translateX(-50%);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+    
+        .timeline-item::before {
             width: 10px;
             height: 10px;
             background-color: #ddd;
@@ -183,15 +193,8 @@
         }
     
         .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: -15px;
-            transform: translateX(-50%);
             width: 0;
             height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
             border-left: 15px solid #ddd;
         }
     
@@ -216,6 +219,7 @@
         .timeline-item img {
             max-width: 100%;
             border-radius: 5px;
+            margin-bottom: 15px; /* Margen aplicado aquí en lugar de en el estilo en línea */
         }
     
         .timeline-item p {
@@ -226,75 +230,107 @@
             margin-top: 0;
         }
     
+        .video-container {
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+            margin: 20px;
+            float: left; /* Para alinear a la izquierda */
+        }
+    
         /* Responsividad */
         @media (max-width: 768px) {
             .timeline {
-                width: 100%; /* Ajustar el ancho de la línea de tiempo al 100% en pantallas pequeñas */
+                width: 100%;
             }
     
             .timeline-item {
-                width: 90%; /* Asegurar que los elementos de la línea de tiempo ocupen el 90% del ancho */
-                margin: 20px auto; /* Espacio vertical entre elementos */
-                text-align: left; /* Alinear el texto a la izquierda para móviles */
+                width: 90%;
+                margin: 20px auto;
+                text-align: left;
             }
     
             .timeline-item.left,
             .timeline-item.right {
-                width: 100%; /* Asegurar que todos los elementos de la línea de tiempo ocupen el 100% en móviles */
-                left: 0; /* Alinear todos los elementos a la izquierda */
-                right: 0; /* Alinear todos los elementos a la izquierda */
-                transform: none; /* Sin transformación para alineación adecuada */
+                width: 100%;
+                left: 0;
+                right: 0;
+                transform: none;
             }
     
             .timeline::before {
-                left: 0; /* Ajustar la línea central a la izquierda en pantallas pequeñas */
+                left: 0;
             }
     
             .timeline-item::after {
-                display: none; /* Ocultamos las flechas en pantallas pequeñas */
+                display: none;
+            }
+    
+            .video-container {
+                position: relative;
+                margin: 20px auto;
+                top: 0;
+                z-index: 10;
+                float: none; /* Restablece para dispositivos móviles */
             }
         }
     </style>
     
     <div class="aos-init" data-aos="fade-up">
+        <div class="video-container">
+            <video width="170" height="360" controls autoplay >
+                <source src="/img/historia.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
         <div class="timeline">
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2003</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-            <div class="timeline-item right">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item right" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2004</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2005</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-            <div class="timeline-item right">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item right" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2006</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2007</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-            <div class="timeline-item right">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item right" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2008</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-            <div class="timeline-item left">
-                <img src="/img/chavez.png" alt="Descripción de la imagen" style="width: 600px; height: auto; margin-bottom: 15px;">
+            <div class="timeline-item left" onclick="scrollToTitle()">
+                <img src="/img/chavez.png" alt="Descripción de la imagen">
                 <h3>2009</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
         </div>
     </div>
+    
+    <script>
+        function scrollToTitle() {
+            const title = document.getElementById('lineaDeVida');
+            title.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    
+    
+
     <style>
         body, html {
             margin: 0;
