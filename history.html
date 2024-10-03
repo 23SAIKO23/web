@@ -267,18 +267,14 @@
             }
     
             .video-container {
-                position: relative;
-                margin: 20px auto;
-                top: 0;
-                z-index: 10;
-                float: none; /* Restablece para dispositivos móviles */
+                display: none; /* Ocultar el video en dispositivos móviles */
             }
         }
     </style>
     
     <div class="aos-init" data-aos="fade-up">
         <div class="video-container">
-            <video width="170" height="360" controls autoplay >
+            <video width="170" height="360" controls autoplay>
                 <source src="/img/historia.mp4" type="video/mp4">
                 Tu navegador no soporta la etiqueta de video.
             </video>
@@ -328,7 +324,6 @@
             title.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-    
     
 
     <style>
