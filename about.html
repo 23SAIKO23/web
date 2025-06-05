@@ -28,39 +28,69 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<style>
+.topbar-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.topbar-contact-info, .topbar-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.topbar-contact-info p {
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+.topbar-social a {
+    color: #7bb241 !important;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+.topbar-social a:hover {
+    color: #4e7c1b !important;
+}
+@media (max-width: 600px) {
+    .topbar-contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .topbar-contact-info, .topbar-social {
+        gap: 10px;
+    }
+    .topbar-contact-info p {
+        font-size: 0.95rem;
+    }
+}
+</style>
 </head>
 
 <body>
     <!-- Topbar Start -->
 <div class="container-fluid bg-light pt-3 d-none d-lg-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
-                        <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-primary pl-3" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                       
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row topbar-contact-row">
+            <div class="topbar-contact-info">
+                <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
+                <p class="text-body px-3">|</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
+            </div>
+            <div class="topbar-social">
+                <a href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
+    </div>
 </div>
     <!-- Topbar End -->
 
@@ -91,13 +121,11 @@
                             </div>
                         </div>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Productos</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socios Comerciales</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item ">Lasca</a>
-                                <a href="single.html" class="dropdown-item">TecnoFarm</a>
-                                <a href="destination.html" class="dropdown-item">Procaps</a>
-                                <a href="guide.html" class="dropdown-item">Hersil</a>
-                                <a href="testimonial.html" class="dropdown-item">Suiphar</a>
+                                <a href="blog.html" class="dropdown-item ">promedical</a>
+                                <a href="single.html" class="dropdown-item">TecnoFarma</a>
+                                <a href="destination.html" class="dropdown-item">luminova</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contactos</a>

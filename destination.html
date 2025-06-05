@@ -24,36 +24,68 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<style>
+.topbar-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.topbar-contact-info, .topbar-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.topbar-contact-info p {
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+.topbar-social a {
+    color: #7bb241 !important;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+.topbar-social a:hover {
+    color: #4e7c1b !important;
+}
+@media (max-width: 600px) {
+    .topbar-contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .topbar-contact-info, .topbar-social {
+        gap: 10px;
+    }
+    .topbar-contact-info p {
+        font-size: 0.95rem;
+    }
+}
+</style>
 </head>
 
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
-                        <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457 </p>
-                    </div>
+            <div class="row topbar-contact-row">
+                <div class="topbar-contact-info">
+                    <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
+                    <p class="text-body px-3">|</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
                 </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-primary pl-3" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                       
-                    </div>
+                <div class="topbar-social">
+                    <a href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -87,13 +119,11 @@
                             </div>
                         </div>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Productos</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socios Comerciales</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item ">Lasca</a>
-                                <a href="single.html" class="dropdown-item">TecnoFarm</a>
-                                <a href="destination.html" class="dropdown-item active">Procaps</a>
-                                <a href="guide.html" class="dropdown-item">Hersil</a>
-                                <a href="testimonial.html" class="dropdown-item">Suiphar</a>
+                                <a href="blog.html" class="dropdown-item ">promedical</a>
+                                <a href="single.html" class="dropdown-item">TecnoFarma</a>
+                                <a href="destination.html" class="dropdown-item">luminova</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contactos</a>
@@ -109,143 +139,124 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Procaps</h3>
+                <h3 class="display-4 text-white text-uppercase">Luminova</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Procaps</p>
+                    <p class="m-0 text-uppercase">Luminova</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Header End -->
- <!-- buscador inicio -->
-    <div class="search-bar mb-4">
-        <div class="search-container">
-            <input type="text" id="searchInput" class="form-control search-input" placeholder="Search for products...">
-            <span class="search-icon">&#128269;</span>
-        </div>
-    </div>
-<!-- buscador fin -->
 
+<div class="d-flex justify-content-center my-4">
+    <a href="https://www.sodiphar.com" target="_blank" class="btn btn-primary btn-lg" style="border-radius: 30px; font-size: 1.2rem; padding: 12px 36px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); font-weight: 600;">Ir a la página de la empresa</a>
+</div>
 
 <!-- productos Start -->
-<!-- Contenedor de productos -->
-<div class="row justify-content-center" id="productContainer">
-<!-- Producto 1 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="Pastillita">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 1.jpg" alt="Pastillita">
-        <div class="product-info">
-            <h5 class="product-name">Pastillita</h5>
-            <p class="product-description">Short description of product 1.</p>
-        </div>
+<!-- Mapa de presencia nacional con puntos interactivos -->
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="font-weight: bold;">Nuestra Presencia en Bolivia</h2>
+    <div class="map-container">
+        <img src="img/Bol.png" alt="Mapa de Bolivia">
+        <!-- Puntos de ubicación -->
+        <div class="map-point" style="top: 38%; left: 30%;"
+             onmouseover="showTooltip(event, this, 'El Alto', 'img/Montenegro.jpg', 'Descripción de El Alto')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 33%; left: 30%;"
+             onmouseover="showTooltip(event, this, 'La Paz', 'img/Montenegro.jpg', 'Descripción de La Paz')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 65%; left: 33%;"
+             onmouseover="showTooltip(event, this, 'Oruro', 'img/Montenegro.jpg', 'Descripción de Oruro')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 15%; left: 35%;"
+             onmouseover="showTooltip(event, this, 'Beni', 'img/Montenegro.jpg', 'Descripción de Beni', true)"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 30%; left: 45%;"
+             onmouseover="showTooltip(event, this, 'Pando', 'img/Montenegro.jpg', 'Descripción de Pando')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 55%; left: 44%;"
+             onmouseover="showTooltip(event, this, 'Cochabamba', 'img/Montenegro.jpg', 'Descripción de Cochabamba')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 50%; left: 56%;"
+             onmouseover="showTooltip(event, this, 'Santa Cruz', 'img/Montenegro.jpg', 'Descripción de Santa Cruz')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 70%; left: 47%;"
+             onmouseover="showTooltip(event, this, 'Sucre', 'img/Montenegro.jpg', 'Descripción de Sucre')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 75%; left: 35%;"
+             onmouseover="showTooltip(event, this, 'Potosí', 'img/Montenegro.jpg', 'Descripción de Potosí')"
+             onmouseout="hideTooltip()"></div>
+        <div class="map-point" style="top: 82%; left: 50%;"
+             onmouseover="showTooltip(event, this, 'Tarija', 'img/Montenegro.jpg', 'Descripción de Tarija')"
+             onmouseout="hideTooltip()"></div>
+        <div id="tooltip" class="tooltip"></div>
     </div>
 </div>
-
-<!-- Producto 2 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="la">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 2.jpg" alt="Product 2">
-        <div class="product-info">
-            <h5 class="product-name">Product 2</h5>
-            <p class="product-description">Short description of product 2.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 3 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="Pro">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 2.jpg" alt="Product 3">
-        <div class="product-info">
-            <h5 class="product-name">Product 3</h5>
-            <p class="product-description">Short description of product 3.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 4 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="qus">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 1.jpg" alt="Product 4">
-        <div class="product-info">
-            <h5 class="product-name">Product 4</h5>
-            <p class="product-description">Short description of product 4.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 5 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="Prooo">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 2.jpg" alt="Product 5">
-        <div class="product-info">
-            <h5 class="product-name">Product 5</h5>
-            <p class="product-description">Sho</p>
-        </div>
-    </div>
-</div>       
-</div>
-<!-- Contenedor de productos -->
-<div class="row justify-content-center" id="productContainer">
-<!-- Producto 1 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="Pastillita">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 1.jpg" alt="Pastillita">
-        <div class="product-info">
-            <h5 class="product-name">Pastillita</h5>
-            <p class="product-description">of </p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 2 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="lasca">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 2.jpg" alt="Product 2">
-        <div class="product-info">
-            <h5 class="product-name">Product 6</h5>
-            <p class="product-description"> description </p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 3 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="fin">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 1.jpg" alt="Product 3">
-        <div class="product-info">
-            <h5 class="product-name">Product 7</h5>
-            <p class="product-description">Short </p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 8 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="Product 8">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 2.jpg" alt="Product 4">
-        <div class="product-info">
-            <h5 class="product-name">8</h5>
-            <p class="product-description">Short description of product 4.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Producto 9 -->
-<div class="col-lg-2 col-md-4 mb-4 product-item" data-name="secu">
-    <div class="product-card">
-        <img class="product-image img-fluid" src="img/pastilla 2.jpg" alt="Product 5">
-        <div class="product-info">
-            <h5 class="product-name">secu</h5>
-            <p class="product-description">Short description of product 5.</p>
-        </div>
-    </div>
-</div>       
-</div>
-
 <!-- productos End -->
+
+<style>
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.map-point {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.map-point:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    max-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s ease;
+    overflow: hidden;
+    text-align: center;
+    max-height: 1000px;
+    overflow-y: auto;
+}
+</style>
+<script>
+    function showTooltip(event, element, name, imgSrc, description, isBeni = false) {
+        const tooltip = document.getElementById('tooltip');
+        tooltip.innerHTML = `<strong>${name}</strong><br><img src="${imgSrc}" alt="${name}" style="width: 100%;"><br>${description}`;
+        tooltip.style.display = 'block';
+        const rect = element.getBoundingClientRect();
+        tooltip.style.left = `${rect.left + window.scrollX + rect.width / 2 - tooltip.offsetWidth / 2}px`;
+        const offsetY = isBeni ? -30 : -10;
+        tooltip.style.top = `${rect.top + window.scrollY + offsetY}px`;
+        tooltip.style.opacity = 1;
+    }
+    function hideTooltip() {
+        const tooltip = document.getElementById('tooltip');
+        tooltip.style.display = 'none';
+        tooltip.style.opacity = 0;
+    }
+</script>
 
 
     <!-- Footer Start -->

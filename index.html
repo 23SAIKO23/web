@@ -40,6 +40,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+<style>
+.destination-item {
+    transition: transform 0.5s ease;
+}
+
+.destination-item:hover {
+    transform: scale(1.1);
+}
+
+/* Barra superior responsiva */
+.topbar-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.topbar-contact-info, .topbar-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.topbar-contact-info p {
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+.topbar-social a {
+    color: #7bb241 !important;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+.topbar-social a:hover {
+    color: #4e7c1b !important;
+}
+@media (max-width: 600px) {
+    .topbar-contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .topbar-contact-info, .topbar-social {
+        gap: 10px;
+    }
+    .topbar-contact-info p {
+        font-size: 0.95rem;
+    }
+}
+</style>
 
 </head>
 
@@ -47,30 +99,17 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
-                        <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
-                    </div>
+            <div class="row topbar-contact-row">
+                <div class="topbar-contact-info">
+                    <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
+                    <p class="text-body px-3">|</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
                 </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-primary pl-3" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                       
-                    </div>
+                <div class="topbar-social">
+                    <a href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -104,13 +143,12 @@
                             </div>
                         </div>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Productos</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socios Comerciales</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item ">Lasca</a>
-                                <a href="single.html" class="dropdown-item">TecnoFarm</a>
-                                <a href="destination.html" class="dropdown-item">Procaps</a>
-                                <a href="guide.html" class="dropdown-item">Hersil</a>
-                                <a href="testimonial.html" class="dropdown-item">Suiphar</a>
+                                <a href="blog.html" class="dropdown-item ">promedical</a>
+                                <a href="single.html" class="dropdown-item">TecnoFarma</a>
+                                <a href="destination.html" class="dropdown-item">luminova</a>
+
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contactos</a>
@@ -129,34 +167,33 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/centro farmaceutico.jpeg" alt="Image" style="width: 980px; height: 560px; object-fit: cover;">
+                    <img class="w-100" src="img/centro farmaceutico.jpeg" alt="Image" style="width: 100%; height: 80vh; object-fit: cover; filter: brightness(0.7);">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 1200px;">
-                            <h1 class="text-white text-uppercase mb-md-3 clicker-script-regular">Sodiphar</h1>
-                            <h3 class="display-3 text-white mb-md-4 aclonica-regular">Soluciones Farmaceuticas</h3>
-                            <a href="./about.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Familia Sodiphar</a>
+                            <h1 class="text-white text-uppercase mb-md-3 clicker-script-regular animate__animated animate__fadeInDown" style="font-size: 4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Sodiphar</h1>
+                            <h3 class="display-3 text-white mb-md-4 aclonica-regular animate__animated animate__fadeInUp" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Soluciones Farmaceuticas</h3>
+                            <a href="./about.html" class="btn btn-primary py-md-3 px-md-5 mt-2 animate__animated animate__fadeInUp animate__delay-1s" style="border-radius: 30px; font-size: 1.2rem; transition: all 0.3s ease;">Familia Sodiphar</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/centro farma.jpg" alt="Image" style="width: 980px; height: 560px; object-fit: cover;">
+                    <img class="w-100" src="img/centro farma.jpg" alt="Image" style="width: 100%; height: 80vh; object-fit: cover; filter: brightness(0.7);">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 1200px;">
-                            <h1 class="text-white text-uppercase mb-md-3 clicker-script-regular">Siempre</h1>
-                            <h3 class="display-3 text-white mb-md-4 aclonica-regular">Tu Aliado en Salud</h3>
-                            <a href="./about.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Familia Sodiphar</a>
+                            <h1 class="text-white text-uppercase mb-md-3 clicker-script-regular animate__animated animate__fadeInDown" style="font-size: 4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Siempre</h1>
+                            <h3 class="display-3 text-white mb-md-4 aclonica-regular animate__animated animate__fadeInUp" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Tu Aliado en Salud</h3>
+                            <a href="./about.html" class="btn btn-primary py-md-3 px-md-5 mt-2 animate__animated animate__fadeInUp animate__delay-1s" style="border-radius: 30px; font-size: 1.2rem; transition: all 0.3s ease;">Familia Sodiphar</a>
                         </div>
                     </div>
                 </div>
-                
             </div>
             <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <div class="btn btn-dark" style="width: 45px; height: 45px; border-radius: 50%; opacity: 0.8;">
                     <span class="carousel-control-prev-icon mb-n2"></span>
                 </div>
             </a>
             <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <div class="btn btn-dark" style="width: 45px; height: 45px; border-radius: 50%; opacity: 0.8;">
                     <span class="carousel-control-next-icon mb-n2"></span>
                 </div>
             </a>
@@ -299,8 +336,8 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/montenegro.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">la paz</h5>
-                            <span></span>
+                            <h5 class="text-white">La Paz</h5>
+                            <span>Oficina Principal</span>
                         </a>
                     </div>
                 </div>
@@ -308,8 +345,8 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/montenegro.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">tarija</h5>
-                            <span>55</span>
+                            <h5 class="text-white">Oruro</h5>
+                            <span>Sucursal</span>
                         </a>
                     </div>
                 </div>
@@ -317,8 +354,8 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/montenegro.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">santa cruz</h5>
-                            <span></span>
+                            <h5 class="text-white">Pando</h5>
+                            <span>Sucursal</span>
                         </a>
                     </div>
                 </div>
@@ -326,60 +363,70 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/montenegro.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Sucre</h5>
-                            <span></span>
+                            <h5 class="text-white">Beni</h5>
+                            <span>Sucursal</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/montenegro.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">pando</h5>
-                            <span></span>
-                        </a>
+                    <div class="destination-item position-relative overflow-hidden mb-2 bg-light">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <div class="text-center">
+                                <i class="fas fa-hard-hat fa-4x text-primary mb-3"></i>
+                                <h5 class="text-dark">Santa Cruz</h5>
+                                <p class="text-muted">En Construcción</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/montenegro.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">oruro</h5>
-                            <span>100 Cities</span>
-                        </a>
+                    <div class="destination-item position-relative overflow-hidden mb-2 bg-light">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <div class="text-center">
+                                <i class="fas fa-hard-hat fa-4x text-primary mb-3"></i>
+                                <h5 class="text-dark">Sucre</h5>
+                                <p class="text-muted">En Construcción</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/montenegro.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">beni</h5>
-                            <span>100 Cities</span>
-                        </a>
+                    <div class="destination-item position-relative overflow-hidden mb-2 bg-light">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <div class="text-center">
+                                <i class="fas fa-hard-hat fa-4x text-primary mb-3"></i>
+                                <h5 class="text-dark">Cochabamba</h5>
+                                <p class="text-muted">En Construcción</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/montenegro.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Cochabamba</h5>
-                            <span>100 Cities</span>
-                        </a>
+                    <div class="destination-item position-relative overflow-hidden mb-2 bg-light">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <div class="text-center">
+                                <i class="fas fa-hard-hat fa-4x text-primary mb-3"></i>
+                                <h5 class="text-dark">Potosi</h5>
+                                <p class="text-muted">En Construcción</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/montenegro.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">potosi</h5>
-                            <span>100 Cities</span>
-                        </a>
+                    <div class="destination-item position-relative overflow-hidden mb-2 bg-light">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <div class="text-center">
+                                <i class="fas fa-hard-hat fa-4x text-primary mb-3"></i>
+                                <h5 class="text-dark">Tarija</h5>
+                                <p class="text-muted">En Construcción</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Destination Start -->
+    <!-- Destination End -->
 
 
     <!-- Service Start -->
@@ -422,117 +469,18 @@
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Productos</h6>
-                <h1>Productos Estrellas</h1>
+                <h1 class="display-4">Productos Estrellas</h1>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="package-item bg-white mb-2" style="border-radius: 20px; border-top: 15px solid green; border-bottom: 2px solid blue;">
-                        <img class="img-fluid" src="img/paracetamol.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>La Paz - El Alto</small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="/blog.html">Paracetamol Mk 750Mg 100 Tabletas</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>10 <small></small></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row justify-content-center align-items-center" id="productos-estrellas-placeholder" style="min-height: 200px;">
+                <div class="col-12 text-center">
+                    <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                    <h4 class="text-muted">Estamos trabajando en esta sección.<br>¡Pronto novedades!</h4>
                 </div>
-            
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="package-item bg-white mb-2" style="border-radius: 20px; border-top: 15px solid green; border-bottom: 2px solid blue;">
-                        <img class="img-fluid" src="img/paracetamol.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Oruro</small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="/single.html">Paracetamol Mk 750Mg 100 Tabletas</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>9.5 <small>(500)</small></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="package-item bg-white mb-2" style="border-radius: 20px; border-top: 15px solid green; border-bottom: 2px solid blue;">
-                        <img class="img-fluid" src="img/paracetamol.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Beni</small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="/destination.html">Paracetamol Mk 750Mg 100 Tabletas</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>8.5 <small>(350)</small></h6>
-                                    <h5 class="m-0">$350</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="package-item bg-white mb-2" style="border-radius: 20px; border-top: 15px solid green; border-bottom: 2px solid blue;">
-                        <img class="img-fluid" src="img/paracetamol.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Cochabamba</small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="/guide.html">Paracetamol Mk 750Mg 100 Tabletas</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>8.5 <small>(450)</small></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="package-item bg-white mb-2" style="border-radius: 20px; border-top: 15px solid green; border-bottom: 2px solid blue;">
-                        <img class="img-fluid" src="img/paracetamol.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Potosi</small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="/testimonial.html">Paracetamol Mk 750Mg 100 Tabletas</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>7.5 <small>(350)</small></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="700">
-                    <div class="package-item bg-white mb-2" style="border-radius: 20px; border-top: 15px solid green; border-bottom: 2px solid blue;">
-                        <img class="img-fluid" src="img/paracetamol.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Sucre</small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="/single.html">Paracetamol Mk 750Mg 100 Tabletas</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>6.5 <small>(350)</small></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             </div>
         </div>
     </div>
     <!-- Packages End -->
+
 <!-- Registration Start -->
 <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
     <div class="container py-5">
@@ -560,75 +508,79 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Conociendo a Nuestros Líderes</h6>
-                <h1>Presentamos a los Visionarios Detrás de Nuestro Éxito</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestro Equipo</h6>
+                <h1 class="display-4">Conoce a Nuestros Líderes</h1>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                    <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                    <div class="team-item bg-white mb-4" style="border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div class="team-img position-relative overflow-hidden" style="border-radius: 15px 15px 0 0;">
+                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="" style="height: 300px; object-fit: cover;">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Dr. Juan Pérez</h5>
+                            <p class="m-0 text-primary">Director General</p>
+                            <p class="small text-muted mt-2">Especialista en Gestión Farmacéutica</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                    <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                    <div class="team-item bg-white mb-4" style="border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div class="team-img position-relative overflow-hidden" style="border-radius: 15px 15px 0 0;">
+                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="" style="height: 300px; object-fit: cover;">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Dra. María García</h5>
+                            <p class="m-0 text-primary">Directora de Operaciones</p>
+                            <p class="small text-muted mt-2">Experta en Logística Farmacéutica</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                    <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                    <div class="team-item bg-white mb-4" style="border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div class="team-img position-relative overflow-hidden" style="border-radius: 15px 15px 0 0;">
+                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="" style="height: 300px; object-fit: cover;">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Dr. Carlos Rodríguez</h5>
+                            <p class="m-0 text-primary">Director Comercial</p>
+                            <p class="small text-muted mt-2">Especialista en Mercado Farmacéutico</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-                    <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                    <div class="team-item bg-white mb-4" style="border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div class="team-img position-relative overflow-hidden" style="border-radius: 15px 15px 0 0;">
+                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="" style="height: 300px; object-fit: cover;">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Dra. Ana Martínez</h5>
+                            <p class="m-0 text-primary">Directora de Calidad</p>
+                            <p class="small text-muted mt-2">Experta en Control de Calidad</p>
                         </div>
                     </div>
                 </div>
@@ -639,55 +591,62 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 py-4 px-sm-3 px-lg-5" style="margin-top: 90px; padding-bottom: 20px;">
-        <div class="row pt-4">
-            <div class="col-lg-3 col-md-6 mb-4">
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
                 <a href="" class="navbar-brand">
                     <h1 class="text-primary"><span class="text-white">SODI</span>PHAR</h1>
                 </a>
-                <p>SODIPHAR es una empresa comprometida con el bienestar de los bolivianos, dedicada a la importación y distribución de medicamentos de alta calidad para asegurar el acceso a tratamientos efectivos en todo el país.</p>
+                <p class="mt-4">SODIPHAR es una empresa comprometida con el bienestar de los bolivianos, dedicada a la importación y distribución de medicamentos de alta calidad para asegurar el acceso a tratamientos efectivos en todo el país.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Servicios</h5>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Enlaces Rápidos</h5>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonios</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros Servicios</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Productos</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Política de Privacidad</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Links</h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                        Facebook <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                        WhatsApp <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a class="text-primary px-3" href="">
-                        Instagram <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary pl-3" href="">
-                        YouTube <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Contactos</h5>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Contacto</h5>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>La Paz Av. del Policía Edificio Montenegro Segundo Piso - Ciudad Satélite</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
                 <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 3px;">Horario de Atención</h6>
+                <div class="d-flex flex-column">
+                    <p class="text-white-50"><i class="far fa-clock mr-2"></i>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+                    <p class="text-white-50"><i class="far fa-clock mr-2"></i>Sábado: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h5>
+                <p>Suscríbete para recibir nuestras últimas actualizaciones y ofertas especiales.</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Tu correo electrónico">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary">Suscribirse</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white border-top py-3 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-2 mb-md-0">
-                <p class="m-0 text-white-50"><a href="#">Velando por la Salud de los Bolivianos</a></p>
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <a href="#">Sodiphar Corporation S.R.L</a>. Todos los derechos reservados.</p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
-                <p class="m-0 text-white-50"><a> FAMILIA SODIPHAR</a></p>
+                <p class="m-0 text-white-50">Diseñado por <a href="#">Familia Sodiphar</a></p>
             </div>
         </div>
     </div>
