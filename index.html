@@ -470,6 +470,119 @@
     </div>
     <!-- Service End -->
 
+    <!-- Modal Cobertura La Paz -->
+    <div id="modalLaPaz" class="modal-cobertura" style="display:none;">
+      <div class="modal-cobertura-content">
+        <span class="modal-cobertura-close" id="closeModalLaPaz">&times;</span>
+        <div class="modal-cobertura-body">
+          <div class="modal-cobertura-img">
+            <img id="modalCoberturaImg" src="img/la Paz.jpg" alt="Departamento" style="width:100%; max-width:260px; border-radius:12px;">
+          </div>
+          <div class="modal-cobertura-desc">
+            <h3 id="modalCoberturaTitulo">La Paz - El Alto</h3>
+            <p id="modalCoberturaDesc">La Paz - El Alto: Av. del Policía 553 Edificio Montenegro 2do. Piso -Ciudad Satélite</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .modal-cobertura {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-cobertura-content {
+        background: #fff;
+        margin: auto;
+        padding: 0;
+        border-radius: 16px;
+        max-width: 600px;
+        width: 90vw;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        position: relative;
+        animation: modalIn 0.3s;
+      }
+      @keyframes modalIn {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      .modal-cobertura-close {
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        font-size: 2rem;
+        color: #333;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .modal-cobertura-body {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        padding: 32px 24px 24px 24px;
+        align-items: center;
+      }
+      .modal-cobertura-img {
+        flex: 1 1 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-cobertura-desc {
+        flex: 2 1 60%;
+      }
+      @media (max-width: 600px) {
+        .modal-cobertura-body {
+          flex-direction: column;
+          gap: 12px;
+          padding: 18px 8px 16px 8px;
+        }
+        .modal-cobertura-content {
+          max-width: 98vw;
+        }
+      }
+    </style>
+    <script>
+      // Abrir modal al hacer click en cualquier tarjeta de departamento
+      document.addEventListener('DOMContentLoaded', function() {
+        // Mapear títulos y descripciones
+        var departamentos = {
+          'La Paz - El Alto': 'La Paz - El Alto: Av. del Policía 553 Edificio Montenegro 2do. Piso -Ciudad Satélite',
+          'Santa Cruz': 'no se sabe aun',
+          'Cochabamba': 'no se saber aun',
+          'Oruro': 'Calle Pagador 6338 entre Calles Murguia y Aldaa Edificio Cámara de Minería 2do piso.',
+          'Beni': 'Calle 18 de noviembre esquina calle La Paz Nro. 113 2do. piso'
+        };
+        var cards = document.querySelectorAll('.service-item h5.mb-2');
+        cards.forEach(function(card) {
+          var departamento = card.textContent.trim();
+          card.parentElement.style.cursor = 'pointer';
+          card.parentElement.addEventListener('click', function() {
+            document.getElementById('modalCoberturaTitulo').textContent = departamento;
+            document.getElementById('modalCoberturaDesc').textContent = departamentos[departamento] || '';
+            document.getElementById('modalCoberturaImg').src = 'img/la Paz.jpg';
+            document.getElementById('modalLaPaz').style.display = 'flex';
+          });
+        });
+        document.getElementById('closeModalLaPaz').onclick = function() {
+          document.getElementById('modalLaPaz').style.display = 'none';
+        };
+        // Cerrar modal al hacer click fuera del contenido
+        document.getElementById('modalLaPaz').onclick = function(e) {
+          if (e.target === this) {
+            this.style.display = 'none';
+          }
+        };
+      });
+    </script>
 
     <!-- Packages Start -->
     <div class="container-fluid py-5">
