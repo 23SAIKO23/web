@@ -56,6 +56,40 @@
 .topbar-social a:hover {
     color: #4e7c1b !important;
 }
+
+/* Estilos para las imágenes de empleados del mes */
+.team-img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* Aspecto cuadrado 1:1 */
+}
+
+.team-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y cubre el espacio */
+    object-position: center; /* Centra la imagen */
+}
+
+.team-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-social {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
 @media (max-width: 600px) {
     .topbar-contact-row {
         flex-direction: row;
@@ -231,13 +265,13 @@
         <h3 class="esquema-subtitulo"></h3>
     
         <div class="row justify-content-center">
-            <!-- Primer nivel: Gerencia -->
+            <!-- Primer nivel: Gerencia General -->
             <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-4 bg-warning text-dark rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="img/doc.jpg" alt="Gerencia" class="img-fluid rounded-circle">
+                        <img src="img/GerenteGeneral.png" alt="Gerente General" class="img-fluid rounded-circle">
                     </div>
-                    <h4>Gerencia</h4>
+                    <h4>Gerencia General</h4>
                 </div>
             </div>
     
@@ -245,23 +279,23 @@
             <div class="col-lg-3 mb-4" data-aos="fade-right" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-orange rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="img/doc.jpg" alt="Ventas" class="img-fluid rounded-circle">
+                        <img src="img/Gerente Comercial.jpg" alt="Gerente Comercial" class="img-fluid rounded-circle">
                     </div>
-                    <h5 style="color: orange;">Ventas</h5>
+                    <h5 style="color: orange;">Gerencia Comercial</h5>
                 </div>
             </div>
             <div class="col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-primary rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="/img/doc.jpg" alt="Regencia" class="img-fluid rounded-circle">
+                        <img src="img/Regente Farmaceutica.png" alt="Regencia" class="img-fluid rounded-circle">
                     </div>
-                    <h5 style="color: #007bff;">Regencia</h5>
+                    <h5 style="color: #007bff;">Regencia Farmacéutica</h5>
                 </div>
             </div>
             <div class="col-lg-3 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-success rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="img/doc.jpg" alt="Logística" class="img-fluid rounded-circle">
+                        <img src="img/Jefe de Logistica.png" alt="Logística" class="img-fluid rounded-circle">
                     </div>
                     <h5 style="color: #28a745;">Logística</h5>
                 </div>
@@ -269,110 +303,96 @@
             <div class="col-lg-3 mb-4" data-aos="fade-left" data-aos-duration="1000">
                 <div class="p-4 bg-white text-dark border-success rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="img/doc.jpg" alt="Finanzas" class="img-fluid rounded-circle">
+                        <img src="img/Jefe de Finanzas.jpg" alt="Finanzas" class="img-fluid rounded-circle">
                     </div>
                     <h5 style="color: #8DC63F;">Finanzas</h5>
                 </div>
             </div>
     
             <!-- Tercer nivel: Subniveles dentro de cada área -->
-            <!-- Ventas -->
+            <!-- Área Comercial -->
             <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="/img/doc.jpg" alt="Vendedor La Paz" class="img-fluid rounded-circle">
+                        <img src="img/Ejecutivo de Ventas1.png" alt="Ejecutivo de Ventas 1" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Vendedor La Paz (2)</h6>
+                    <h6>Ejecutivo de Ventas La Paz</h6>
                 </div>
                 <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="/img/doc.jpg" alt="Vendedor El Alto" class="img-fluid rounded-circle">
+                        <img src="img/Ejecutivo de Ventas 2.png" alt="Ejecutivo de Ventas 2" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Vendedor El Alto (2)</h6>
+                    <h6>Ejecutivo de Ventas El Alto</h6>
                 </div>
                 <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="img/doc.jpg" alt="Vende-Repart CBBA" class="img-fluid rounded-circle">
+                        <img src="img/Ejecutivo de Ventas 3.png" alt="Ejecutivo de Ventas 3" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Vende-Repart CBBA (2)</h6>
-                </div>
-                <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
-                    <div class="image-container">
-                        <img src="img/doc.jpg" alt="Vende-Repart Beni" class="img-fluid rounded-circle">
-                    </div>
-                    <h6>Vende-Repart Beni (2)</h6>
-                </div>
-                <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
-                    <div class="image-container">
-                        <img src="img/doc.jpg" alt="Vende-Repart Oruro" class="img-fluid rounded-circle">
-                    </div>
-                    <h6>Vende-Repart Oruro (2)</h6>
-                </div>
-                <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform mb-3">
-                    <div class="image-container">
-                        <img src="img/doc.jpg" alt="Vendedor Potosí" class="img-fluid rounded-circle">
-                    </div>
-                    <h6>Vendedor Potosí (1)</h6>
+                    <h6>Ejecutivo de Ventas CBBA</h6>
                 </div>
                 <div class="p-3 bg-light border-orange rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="img/doc.jpg" alt="Vendedor Sucre" class="img-fluid rounded-circle">
+                        <img src="img/Ejecutivo de Ventas 4.png" alt="Ejecutivo de Ventas 4" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Vendedor Sucre (1)</h6>
+                    <h6>Ejecutivo de Ventas Oruro</h6>
                 </div>
             </div>
     
-            <!-- Regencia -->
+            <!-- Área de Regencia -->
             <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-primary rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="img/team-3.jpg" alt="Regente La Paz-El Alto" class="img-fluid rounded-circle">
+                        <img src="img/Responsable Farmaceutico.jpg.png" alt="Responsable Farmacéutico 1" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Regente La Paz-El Alto (1)</h6>
+                    <h6>Responsable La Paz</h6>
                 </div>
                 <div class="p-3 bg-light border-primary rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="img/team-3.jpg" alt="Regente CBBA" class="img-fluid rounded-circle">
+                        <img src="img/Responsable Farmaceutico 2.jpg.png" alt="Responsable Farmacéutico 2" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Regente CBBA (1)</h6>
-                </div>
-                <div class="p-3 bg-light border-primary rounded shadow-box text-center hover-transform mb-3">
-                    <div class="image-container">
-                        <img src="img/team-3.jpg" alt="Regente Beni" class="img-fluid rounded-circle">
-                    </div>
-                    <h6>Regente Beni (1)</h6>
+                    <h6>Responsable El Alto</h6>
                 </div>
                 <div class="p-3 bg-light border-primary rounded shadow-box text-center hover-transform">
                     <div class="image-container">
-                        <img src="img/team-3.jpg" alt="Regente Oruro" class="img-fluid rounded-circle">
+                        <img src="img/Asistente de Control de Calidad.png" alt="Control de Calidad" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Regente Oruro (1)</h6>
+                    <h6>Control de Calidad</h6>
                 </div>
             </div>
     
-            <!-- Logística -->
+            <!-- Área de Logística -->
             <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-success rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="img/team-3.jpg" alt="Repartidor La Paz-El Alto" class="img-fluid rounded-circle">
+                        <img src="img/Auxiliar de Almacen.png" alt="Auxiliar de Almacén 1" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Repartidor La Paz-El Alto (2)</h6>
+                    <h6>Auxiliar de Almacén La Paz</h6>
+                </div>
+                <div class="p-3 bg-light border-success rounded shadow-box text-center hover-transform mb-3">
+                    <div class="image-container">
+                        <img src="img/Auxiliar de Almacen 2.png" alt="Auxiliar de Almacén 2" class="img-fluid rounded-circle">
+                    </div>
+                    <h6>Auxiliar de Almacén El Alto</h6>
                 </div>
             </div>
     
-            <!-- Finanzas -->
+            <!-- Área de Finanzas -->
             <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1000">
                 <div class="p-3 bg-light border-success rounded shadow-box text-center hover-transform mb-3">
                     <div class="image-container">
-                        <img src="img/team-3.jpg" alt="Contador Nacional" class="img-fluid rounded-circle">
+                        <img src="img/Contabilidad.png" alt="Contabilidad" class="img-fluid rounded-circle">
                     </div>
-                    <h6>Contador Nacional (1)</h6>
+                    <h6>Contabilidad</h6>
+                </div>
+                <div class="p-3 bg-light border-success rounded shadow-box text-center hover-transform mb-3">
+                    <div class="image-container">
+                        <img src="img/Asistente de Archivos.jpg" alt="Asistente de Archivos" class="img-fluid rounded-circle">
+                    </div>
+                    <h6>Asistente de Archivos</h6>
                 </div>
             </div>
         </div>
     </div>
-    
-    
 </div>
 <!-- Esquema Organizacional End -->
 
@@ -384,75 +404,71 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Vendedor</h6>
-                <h1>Vendedor del mes</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destacados</h6>
+                <h1>Empleados del Mes</h1>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                     <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                        <div class="team-img">
+                            <img src="img/Auxiliar de Almacen.png" alt="Auxiliar de Almacén">
                             <div class="team-social">
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-award"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-star"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-trophy"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Auxiliar de Almacén</h5>
+                            <p class="m-0">Febrero 2024</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                     <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                        <div class="team-img">
+                            <img src="img/Ejecutivo de Ventas 3.png" alt="Ejecutivo de Ventas">
                             <div class="team-social">
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-award"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-star"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-trophy"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Ejecutivo de Ventas</h5>
+                            <p class="m-0">Marzo 2024</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                     <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                        <div class="team-img">
+                            <img src="img/Auxiliar de Almacen 2.png" alt="Auxiliar de Almacén">
                             <div class="team-social">
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-award"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-star"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-trophy"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Auxiliar de Almacén</h5>
+                            <p class="m-0">Abril 2024</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                     <div class="team-item bg-white mb-4">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-img">
+                            <img src="img/Ejecutivo de Ventas 5.png" alt="Ejecutivo de Ventas">
                             <div class="team-social">
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-award"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-star"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fas fa-trophy"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate">Guide Name</h5>
-                            <p class="m-0">Designation</p>
+                            <h5 class="text-truncate">Ejecutivo de Ventas</h5>
+                            <p class="m-0">Mayo 2024</p>
                         </div>
                     </div>
                 </div>
