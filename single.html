@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -40,8 +40,8 @@
                 <div class="topbar-social">
                     <a href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socios Comerciales</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
                                 <a href="blog.html" class="dropdown-item ">promedical</a>
-                                <a href="single.html" class="dropdown-item">TecnoFarma</a>
+                                <a href="single.html" class="dropdown-item active">Adium</a>
                                 <a href="destination.html" class="dropdown-item">luminova</a>
                             </div>
                         </div>
@@ -95,11 +95,11 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">TecnoFarm</h3>
+                <h3 class="display-4 text-white text-uppercase">Adium</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">TecnoFarma</p>
+                    <p class="m-0 text-uppercase">Adium</p>
                 </div>
             </div>
         </div>
@@ -107,7 +107,9 @@
 
 <!-- Header End -->
 <div class="d-flex justify-content-center my-4">
-    <a href="https://www.sodiphar.com" target="_blank" class="btn btn-primary btn-lg" style="border-radius: 30px; font-size: 1.2rem; padding: 12px 36px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); font-weight: 600;">Ir a la página de la empresa</a>
+    <a href="https://adium.com.bo/" target="_blank" aria-label="Ir a la página de la empresa">
+        <img src="img/adiumlogo1.png" alt="Adium Bolivia" style="max-width: 420px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+    </a>
 </div>
 
 <!-- Mapa de presencia nacional con puntos interactivos (solo La Paz, Beni, Pando) -->
@@ -116,16 +118,17 @@
     <div class="map-container">
         <img src="img/Bol.png" alt="Mapa de Bolivia">
         <!-- Puntos de ubicación solo para La Paz, Beni y Pando -->
-        <div class="map-point" style="top: 33%; left: 30%;"
-             onmouseover="showTooltip(event, this, 'La Paz', 'img/Montenegro.jpg', 'Descripción de La Paz')"
-             onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 15%; left: 35%;"
-             onmouseover="showTooltip(event, this, 'Beni', 'img/Montenegro.jpg', 'Descripción de Beni', true)"
-             onmouseout="hideTooltip()"></div>
-        <div class="map-point" style="top: 30%; left: 45%;"
-             onmouseover="showTooltip(event, this, 'Pando', 'img/Montenegro.jpg', 'Descripción de Pando')"
-             onmouseout="hideTooltip()"></div>
-        <div id="tooltip" class="tooltip"></div>
+        <div class="department-dot" style="position: absolute; top: 33%; left: 30%;" data-department="la-paz" title="La Paz"></div>
+        <div class="department-dot" style="position: absolute; top: 15%; left: 35%;" data-department="beni" title="Beni"></div>
+        <div class="department-dot" style="position: absolute; top: 30%; left: 45%;" data-department="pando" title="Pando"></div>
+        
+        <!-- Ventana emergente -->
+        <div class="popup" id="department-popup">
+            <button class="popup-close" onclick="closePopup()">×</button>
+            <img src="img/montenegro.jpg" alt="Sucursal Montenegro" id="popup-image">
+            <h4 id="popup-title">Sucursal Montenegro</h4>
+            <p id="popup-description">Nuestra sucursal principal ubicada en La Paz, Av. del Policía Edificio Montenegro Segundo Piso - Ciudad Satélite. Ofrecemos atención personalizada y productos farmacéuticos de alta calidad.</p>
+        </div>
     </div>
 </div>
 
@@ -143,34 +146,125 @@
     display: block;
     margin: 0 auto;
 }
-.map-point {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: red;
+/* Estilos para los puntos rojos del mapa */
+.department-dot {
+    width: 12px;
+    height: 12px;
+    background: #e74c3c;
+    border: 2px solid #c0392b;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.map-point:hover {
-    transform: translate(-50%, -50%) scale(1.2);
-}
-.tooltip {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
+    transition: all 0.3s ease;
     z-index: 10;
-    max-width: 150px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.2s ease;
-    overflow: hidden;
+}
+
+.department-dot:hover {
+    background: #c0392b;
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.8);
+}
+
+.department-dot:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Estilos para la ventana emergente */
+.popup {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    padding: 20px;
+    max-width: 280px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px) scale(0.95);
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.popup img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.popup h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
     text-align: center;
-    max-height: 1000px;
-    overflow-y: auto;
+}
+
+.popup p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.popup-close:hover {
+    background: #c0392b;
+}
+
+/* Responsive para la ventana emergente */
+@media (max-width: 768px) {
+    .popup {
+        max-width: 240px;
+        padding: 15px;
+    }
+    
+    .popup img {
+        height: 120px;
+    }
+    
+    .popup h4 {
+        font-size: 14px;
+    }
+    
+    .popup p {
+        font-size: 12px;
+    }
 }
 .topbar-contact-row {
     display: flex;
@@ -215,21 +309,99 @@
 }
 </style>
 <script>
-    function showTooltip(event, element, name, imgSrc, description, isBeni = false) {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.innerHTML = `<strong>${name}</strong><br><img src="${imgSrc}" alt="${name}" style="width: 100%;"><br>${description}`;
-        tooltip.style.display = 'block';
-        const rect = element.getBoundingClientRect();
-        tooltip.style.left = `${rect.left + window.scrollX + rect.width / 2 - tooltip.offsetWidth / 2}px`;
-        const offsetY = isBeni ? -30 : -10;
-        tooltip.style.top = `${rect.top + window.scrollY + offsetY}px`;
-        tooltip.style.opacity = 1;
+    const departments = {
+        'la-paz': {
+            name: 'La Paz',
+            title: 'Sucursal Montenegro - La Paz',
+            description: 'Sucursal principal ubicada en Av. del Policía Edificio Montenegro Segundo Piso - Ciudad Satélite. Centro de operaciones y atención al cliente.'
+        },
+        'beni': {
+            name: 'Beni',
+            title: 'Sucursal Beni',
+            description: 'Servicio en la región amazónica del Beni. Distribución de productos farmacéuticos para el norte del país.'
+        },
+        'pando': {
+            name: 'Pando',
+            title: 'Sucursal Pando',
+            description: 'Punto de servicio en la región más septentrional. Cobertura farmacéutica para la Amazonía boliviana.'
+        }
+    };
+
+    let currentPopup = null;
+    let popupTimeout;
+
+    // Agregar eventos a todos los puntos
+    document.querySelectorAll('.department-dot').forEach(dot => {
+        dot.addEventListener('mouseenter', function() {
+            const department = this.getAttribute('data-department');
+            const deptInfo = departments[department];
+            
+            if (deptInfo) {
+                showPopup(this, deptInfo);
+            }
+        });
+        
+        dot.addEventListener('mouseleave', function() {
+            // Retrasar el cierre para permitir hover en el popup
+            popupTimeout = setTimeout(() => {
+                if (currentPopup && !currentPopup.matches(':hover')) {
+                    closePopup();
+                }
+            }, 200);
+        });
+    });
+
+    // Eventos del popup
+    const popup = document.getElementById('department-popup');
+    popup.addEventListener('mouseenter', function() {
+        clearTimeout(popupTimeout);
+    });
+    
+    popup.addEventListener('mouseleave', function() {
+        closePopup();
+    });
+
+    function showPopup(dot, deptInfo) {
+        const popup = document.getElementById('department-popup');
+        const popupTitle = document.getElementById('popup-title');
+        const popupDescription = document.getElementById('popup-description');
+        
+        // Actualizar contenido
+        popupTitle.textContent = deptInfo.title;
+        popupDescription.textContent = deptInfo.description;
+        
+        // Posicionar popup
+        const dotRect = dot.getBoundingClientRect();
+        const mapRect = document.querySelector('.map-container').getBoundingClientRect();
+        
+        let left = dotRect.left - mapRect.left + (dotRect.width / 2);
+        let top = dotRect.top - mapRect.top - 200;
+        
+        // Ajustar posición para que no se salga de la pantalla
+        if (left < 150) left = 150;
+        if (left > 350) left = 350;
+        if (top < 50) top = dotRect.top - mapRect.top + 50;
+        
+        popup.style.left = left + 'px';
+        popup.style.top = top + 'px';
+        
+        // Mostrar popup
+        popup.classList.add('show');
+        currentPopup = popup;
     }
-    function hideTooltip() {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.style.display = 'none';
-        tooltip.style.opacity = 0;
+
+    function closePopup() {
+        const popup = document.getElementById('department-popup');
+        popup.classList.remove('show');
+        currentPopup = null;
     }
+
+    // Cerrar popup al hacer clic en cualquier lugar
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.department-dot') && !e.target.closest('.popup')) {
+            closePopup();
+        }
+    });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
@@ -249,27 +421,19 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Servicios</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonios</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                    <a class="text-white-50 mb-2" href="contact.html#ubicaciones"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="service.html#clientes"><i class="fa fa-angle-right mr-2"></i>Clientes</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                        Facebook <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                        WhatsApp <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a class="text-primary px-3" href="">
-                        Instagram <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary pl-3" href="">
-                        YouTube <i class="fab fa-youtube"></i>
-                    </a>
+                    <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">Facebook <i class="fab fa-facebook-f"></i></a>
+                    <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">WhatsApp <i class="fab fa-whatsapp"></i></a>
+                    <a class="text-primary px-3" href="">YouTube <i class="fab fa-youtube"></i></a>
+                    <a class="text-primary px-3" href="">TikTok <i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">

@@ -1,0 +1,241 @@
+/* Estilos específicos para contact.html */
+
+/* Barra superior responsiva */
+.topbar-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topbar-contact-info, .topbar-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.topbar-contact-info p {
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-social a {
+    color: #7bb241 !important;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.topbar-social a:hover {
+    color: #4e7c1b !important;
+}
+
+@media (max-width: 600px) {
+    .topbar-contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .topbar-contact-info, .topbar-social {
+        gap: 10px;
+    }
+    .topbar-contact-info p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Estilos mejorados para la página de contacto */
+.contact-hero {
+    background: linear-gradient(135deg, #7bb241 0%, #00649f 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.contact-hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: none;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #7bb241, #00649f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2rem;
+}
+
+.contact-form-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.contact-form-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-control:focus {
+    border-color: #7bb241;
+    box-shadow: 0 0 0 0.2rem rgba(123, 178, 65, 0.25);
+    background: white;
+}
+
+.btn-contact {
+    background: linear-gradient(135deg, #7bb241, #00649f);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(123, 178, 65, 0.4);
+    color: white;
+}
+
+.locations-section {
+    background: #f8f9fa;
+    padding: 40px 0;
+}
+
+.location-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Botón flotante de WhatsApp */
+.floating-action {
+    position: fixed;
+    bottom: 100px;
+    right: 38px;
+    z-index: 1000;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #7bb241, #00649f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    .contact-form-card {
+        padding: 30px 20px;
+    }
+    .contact-card {
+        padding: 30px 20px;
+    }
+    .floating-action {
+        bottom: 90px;
+        right: 28px;
+    }
+}

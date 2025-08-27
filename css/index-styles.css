@@ -1,0 +1,172 @@
+/* Estilos específicos para index.html */
+
+/* Animaciones para elementos de destino */
+.destination-item {
+    transition: transform 0.5s ease;
+}
+
+.destination-item:hover {
+    transform: scale(1.1);
+}
+
+/* Barra superior responsiva */
+.topbar-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topbar-contact-info, .topbar-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.topbar-contact-info p {
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-social a {
+    color: #7bb241 !important;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.topbar-social a:hover {
+    color: #4e7c1b !important;
+}
+
+/* Responsive para barra superior */
+@media (max-width: 600px) {
+    .topbar-contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .topbar-contact-info, .topbar-social {
+        gap: 10px;
+    }
+    .topbar-contact-info p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Tarjetas de cobertura */
+.cobertura-card {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Modal de cobertura */
+.modal-cobertura {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cobertura-content {
+    background: #fff;
+    margin: auto;
+    padding: 0;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90vw;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    position: relative;
+    animation: modalIn 0.3s;
+}
+
+@keyframes modalIn {
+    from { 
+        transform: scale(0.9); 
+        opacity: 0; 
+    }
+    to { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+.modal-cobertura-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal-cobertura-body {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 32px 24px 24px 24px;
+    align-items: center;
+}
+
+.modal-cobertura-img {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cobertura-desc {
+    flex: 2 1 60%;
+}
+
+/* Responsive para modal */
+@media (max-width: 600px) {
+    .modal-cobertura-body {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 8px 16px 8px;
+    }
+    .modal-cobertura-content {
+        max-width: 98vw;
+    }
+}
+
+/* Estilos personalizados para la sección de Distribuidora Farmacéutica */
+.bg-registration {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/IMG-20250606-WA0006.jpg), no-repeat center center !important;
+    background-size: cover !important;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.bg-registration .container {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive para la sección de Distribuidora Farmacéutica */
+@media (max-width: 768px) {
+    .bg-registration {
+        min-height: 400px;
+    }
+    
+    .bg-registration .container {
+        min-height: 300px;
+    }
+}

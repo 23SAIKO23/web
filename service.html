@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -24,8 +24,124 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <style>
+        /* Estilos para el topbar */
+        .topbar-contact-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .topbar-contact-info, .topbar-social {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .topbar-contact-info p {
+            margin: 0 10px 0 0;
+            font-size: 1rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+        }
+        .topbar-social a {
+            color: #7bb241 !important;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+        .topbar-social a:hover {
+            color: #4e7c1b !important;
+        }
+        @media (max-width: 600px) {
+            .topbar-contact-row {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .topbar-contact-info, .topbar-social {
+                gap: 10px;
+            }
+            .topbar-contact-info p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Estilos mejorados para los servicios */
+        .service-item {
+            border: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            padding-top: 1.5rem !important; /* reduce vertical padding */
+            padding-bottom: 1.5rem !important;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+        }
+
+        .service-icon {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 0.75rem !important; /* tighter icon spacing */
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7bb241, #00649f);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-item h4 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            line-height: 1.55;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .service-col {
+                margin-bottom: 30px;
+            }
+            
+            .service-item {
+                margin: 0 10px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .row.justify-content-center {
+                margin: 0 -15px;
+            }
+            
+            .service-col {
+                padding: 0 15px;
+            }
+        }
+    </style>
 
 
 
@@ -35,30 +151,17 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
-                        <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
-                    </div>
+            <div class="row topbar-contact-row">
+                <div class="topbar-contact-info">
+                    <p><i class="fa fa-envelope mr-2"></i>sodipharcorporationsrl@gmail.com</p>
+                    <p class="text-body px-3">|</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+591 77727457</p>
                 </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-primary pl-3" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                       
-                    </div>
+                <div class="topbar-social">
+                    <a href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
@@ -95,7 +198,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socios Comerciales</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
                                 <a href="blog.html" class="dropdown-item ">promedical</a>
-                                <a href="single.html" class="dropdown-item">TecnoFarma</a>
+                                <a href="single.html" class="dropdown-item">Adium</a>
                                 <a href="destination.html" class="dropdown-item">luminova</a>
                             </div>
                         </div>
@@ -127,126 +230,9 @@
 
 
     <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                <h1>Puntos Estrategicos</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="laPazElAlto">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">La Paz - El Alto</h5>
-                        <p class="m-0">La Paz - El Alto: Av. del Policía 553 Edificio Montenegro 2do. Piso - Ciudad Satélite</p>
-                    </div>
-                </div>
-                
-                <script>
-                    // Asignar evento click con JavaScript
-                    document.getElementById('laPazElAlto').addEventListener('click', function() {
-                        // URL de Google Maps con la dirección
-                        const address = "Av. del Policía 553 Edificio Montenegro 2do. Piso, Ciudad Satélite, La Paz - El Alto";
-                        const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-                        window.open(mapUrl, '_blank'); // Abre la URL en una nueva pestaña
-
-                    }
-                );
-                </script>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="oruroLocation">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Oruro</h5>
-                        <p class="m-0">Calle Pagador 6338 entre Calles Murguia y Aldaa, Edificio Cámara de Minería, 2do piso.</p>
-                    </div>
-                </div>
-                
-                <script>
-                    // Manejador de eventos solo para Oruro
-                    document.getElementById('oruroLocation').addEventListener('click', function() {
-                        const mapUrl = "https://www.google.com/maps/place/2VGQ%2BJFH,+Oruro/@-17.9738804,-67.111019,17.25z/data=!4m5!3m4!1s0x93e2b0a1fdff86f5:0xc2628ace1562e1ad!8m2!3d-17.9734375!4d-67.1112656!5m1!1e4?hl=es&entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D";
-                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
-                    });
-                </script>
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="cochabambaLocation">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Cochabamba</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-
-                <script>
-                    // Manejador de eventos solo para Cochabamba
-                    document.getElementById('cochabambaLocation').addEventListener('click', function() {
-                        const mapUrl = "https://www.google.com/maps/place/J.Arauco+275e,+Cochabamba/@-17.3895001,-66.1464765,17z/data=!4m6!3m5!1s0x93e37400a0a8564f:0x9c96cc3ccbe65354!8m2!3d-17.3894378!4d-66.1463015!16s%2Fg%2F11fst62x8g!5m1!1e4?hl=es&entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D";
-                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
-                    });
-                </script>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="trinidadLocation">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Trinidad</h5>
-                        <p class="m-0">Calle 18 de noviembre esquina calle La Paz Nro. 113, 2do piso</p>
-                    </div>
-                </div>
-                
-                <script>
-                    // Manejador de eventos solo para Trinidad
-                    document.getElementById('trinidadLocation').addEventListener('click', function() {
-                        const mapUrl = "https://www.google.com/maps/place/C.+La+Paz+192,+Trinidad/@-14.836454,-64.9063927,17z/data=!4m6!3m5!1s0x93dd702a09117221:0x80f7e597dbd460c3!8m2!3d-14.8364558!4d-64.9062007!16s%2Fg%2F11rzgv9v5l!5m1!1e4?hl=es&entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D";
-                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
-                    });
-                </script>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4" id="santaCruzLocation">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Santa Cruz</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                
-                <script>
-                    // Manejador de eventos solo para Santa Cruz
-                    document.getElementById('santaCruzLocation').addEventListener('click', function() {
-                        const mapUrl = "https://www.google.com/maps/place/Av.+San+Martin+1300,+Santa+Cruz+de+la+Sierra/@-17.7614503,-63.1978538,17z/data=!4m6!3m5!1s0x93f1e7f6ae59137d:0x704d627eb30dbd2";
-                        window.open(mapUrl, '_blank'); // Abre el mapa en una nueva pestaña
-                    });
-                </script>
-                
- 
-
-
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Sucre</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="700">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Potosi</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="800">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Tarija</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="900">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Pando</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-            </div>
+    <div class="container-fluid py-2">
+        <div class="container pt-2 pb-2">
+           
             <script>
                 AOS.init({
                   duration: 1000, // Duración de la animación en milisegundos
@@ -257,11 +243,69 @@
     </div>
     <!-- Service End -->
 
-
+    <!-- Services Section Start -->
+    <div class="container-fluid py-3">
+        <div class="container pt-3 pb-3">
+            <div class="text-center mb-4 pb-2">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros Servicios</h6>
+                <h1 class="display-4 mb-4">Importación, Distribución, Comercialización y Promoción Médica</h1>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-4 service-col">
+                    <div class="service-item bg-white text-center mb-2 px-4 h-100 shadow-sm" style="border-radius: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="service-icon">
+                            <i class="fas fa-globe-americas fa-3x text-success"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Importación</h4>
+                        <p class="text-muted px-2">Generamos acuerdos comerciales de importación en las modalidades disponibles y más convenientes para ambas empresas.
+                            Realizamos todo el proceso de registros y legalidades del país
+                            </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-4 service-col">
+                    <div class="service-item bg-white text-center mb-2 px-4 h-100 shadow-sm" style="border-radius: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="service-icon">
+                            <i class="fas fa-truck fa-3x text-success"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Distribución</h4>
+                        <p class="text-muted px-2">Logística de distribución de pedidos en el territorio nacional, cumpliendo las buenas prácticas de almacenamiento y de entrega de productos farmacéuticos.
+                            Contamos con 5 CEDIS.
+                            </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-4 service-col">
+                    <div class="service-item bg-white text-center mb-2 px-4 h-100 shadow-sm" style="border-radius: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="service-icon">
+                            <i class="fas fa-store fa-3x text-success"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Comercialización</h4>
+                        <p class="text-muted px-2">Contamos con un equipo de ventas, entrenados para posicionar marca en farmacia, realizar negocios sostenibles y realizar la cobranza con el canal horizontal y cadenas.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-4 service-col">
+                    <div class="service-item bg-white text-center mb-2 px-4 h-100 shadow-sm" style="border-radius: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md fa-3x text-success"></i>
+                        </div>
+                        <h4 class="mb-3 text-dark">Promoción Médica</h4>
+                        <p class="text-muted px-2">Contamos con un equipo de promoción médica y Trade, lo cual nos permite prestar el servicio de visita y acciones en farmacia con objetivo de posicionar marca.
+                            Acompañamos a las empresas en zonas piloto, acciones específicas en sucursales de cadena, etc.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section End -->
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-3 pb-3">
+    <div class="container-fluid py-3">
+        <div class="container py-3">
+            <div class="text-center mb-3 pb-2">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
                 <h1>Clientes</h1>
             </div>
@@ -309,8 +353,8 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 py-4 px-sm-3 px-lg-5" style="margin-top: 90px; padding-bottom: 20px;">
-        <div class="row pt-4">
+    <div class="container-fluid bg-dark text-white-50 py-3 px-sm-3 px-lg-5" style="margin-top: 60px; padding-bottom: 15px;">
+        <div class="row pt-3">
             <div class="col-lg-3 col-md-6 mb-4">
                 <a href="" class="navbar-brand">
                     <h1 class="text-primary"><span class="text-white">SODIP</span>HAR</h1>
@@ -320,27 +364,19 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Servicios</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonios</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                    <a class="text-white-50 mb-2" href="contact.html#ubicaciones"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="service.html#clientes"><i class="fa fa-angle-right mr-2"></i>Clientes</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">
-                        Facebook <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
-                        WhatsApp <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a class="text-primary px-3" href="">
-                        Instagram <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary pl-3" href="">
-                        YouTube <i class="fab fa-youtube"></i>
-                    </a>
+                    <a class="text-primary px-3" href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/">Facebook <i class="fab fa-facebook-f"></i></a>
+                    <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">WhatsApp <i class="fab fa-whatsapp"></i></a>
+                    <a class="text-primary px-3" href="">YouTube <i class="fab fa-youtube"></i></a>
+                    <a class="text-primary px-3" href="">TikTok <i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
@@ -351,7 +387,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white border-top py-3 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="container-fluid bg-dark text-white border-top py-2 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-2 mb-md-0">
                 <p class="m-0 text-white-50"><a href="#">Velando por la Salud de los Bolivianos</a></p>

@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -29,50 +29,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<style>
-.topbar-contact-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.topbar-contact-info, .topbar-social {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-.topbar-contact-info p {
-    margin: 0 10px 0 0;
-    font-size: 1rem;
-    color: #444;
-    display: flex;
-    align-items: center;
-}
-.topbar-social a {
-    color: #7bb241 !important;
-    font-size: 1.2rem;
-    transition: color 0.2s;
-}
-.topbar-social a:hover {
-    color: #4e7c1b !important;
-}
-@media (max-width: 600px) {
-    .topbar-contact-row {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-    .topbar-contact-info, .topbar-social {
-        gap: 10px;
-    }
-    .topbar-contact-info p {
-        font-size: 0.95rem;
-    }
-}
-</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Estilos específicos del contact -->
+    <link href="css/contact-styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -88,14 +48,13 @@
                 <div class="topbar-social">
                     <a href="https://www.facebook.com/people/Sodiphar-Corporation-SRL/100089747181729/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
-
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
@@ -113,20 +72,20 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link ">Inicio</a>
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
                         <a href="service.html" class="nav-item nav-link">Servicios</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre Nosotros</a> <!-- Cambiado href a # -->
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre Nosotros</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
                                 <a href="history.html" class="dropdown-item">Historia</a>
-                                <a href="about.html" class="dropdown-item">Nosotros</a> <!-- Nueva opción añadida -->
+                                <a href="about.html" class="dropdown-item">Nosotros</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Socios Comerciales</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item ">promedical</a>
-                                <a href="single.html" class="dropdown-item">TecnoFarma</a>
+                                <a href="blog.html" class="dropdown-item">promedical</a>
+                                <a href="single.html" class="dropdown-item">Adium</a>
                                 <a href="destination.html" class="dropdown-item">luminova</a>
                             </div>
                         </div>
@@ -138,275 +97,211 @@
     </div>
     <!-- Navbar End -->
 
-
-    <!-- Header Start -->
-    <div class="container-fluid page-header">
+    <!-- Hero Section Start -->
+    <div class="contact-hero">
         <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Contact</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="animate__animated animate__fadeInDown">Contáctanos</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                        Estamos aquí para ayudarte. Comunícate con nosotros y descubre cómo podemos cuidar de tu salud.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+    <!-- Hero Section End -->
 
-
-   <!-- Booking Start -->
-   <div class="container-fluid booking mt-5 pb-5" style="max-width: 70%; margin: auto;"></div>
-   <div class="container pb-5" data-aos="fade-up">
-    <div class="bg-light shadow" style="padding: 30px;">
-        <div class="row align-items-center justify-content-center" style="min-height: 60px; text-align: center;">
-            <h3 class="playwrite-cu-a">"Trabajamos con pasión para cuidar tu salud"</h3>
-        </div>
-    </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // Duración de la animación en milisegundos
-    once: true, // Animar solo una vez
-  });
-</script>
-</div>
-<!-- Booking End -->
-<div class="container py-5"> <!-- Agregado container para controlar el ancho -->
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
-                </div>
+    <!-- Contact Information Section Start -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Información de Contacto</h2>
+                <p>Múltiples formas de comunicarte con nuestro equipo profesional</p>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Dirección Principal</h4>
+                        <p class="text-muted">Av. del Policía 553, Edificio Montenegro, 2do Piso - Ciudad Satélite, La Paz - El Alto</p>
                     </div>
                 </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Teléfono</h4>
+                        <p class="text-muted">+591 77727457</p>
+                        <p class="text-muted">Lun - Vie: 8:00 AM - 6:00 PM</p>
                     </div>
                 </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p class="text-muted">sodipharcorporationsrl@gmail.com</p>
+                        <p class="text-muted">Respuesta en 24 horas</p>
                     </div>
-                </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
-                </div>
+    <!-- Contact Information Section End -->
+
+    <!-- Contact Form Section Start -->
+    <div class="contact-form-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Envíanos un Mensaje</h2>
+                <p>Cuéntanos cómo podemos ayudarte. Tu consulta es importante para nosotros.</p>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-card" data-aos="fade-up" data-aos-delay="200">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Tu Nombre Completo" required>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="email" class="form-control" placeholder="Tu Correo Electrónico" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="tel" class="form-control" placeholder="Tu Teléfono">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <select class="form-control">
+                                        <option value="">Selecciona un Tema</option>
+                                        <option value="consulta">Consulta General</option>
+                                        <option value="productos">Información de Productos</option>
+                                        <option value="distribucion">Servicios de Distribución</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control" rows="5" placeholder="Tu Mensaje" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-contact">
+                                    <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                        <div id="respuesta" class="mt-3 text-center"></div>
                     </div>
-                </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="team-item bg-white mb-4">
-                <div class="team-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                    <div class="team-social">
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-success btn-square" href="https://wa.me/[tu_numero]" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a> 
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <h5 class="text-truncate">Guide Name</h5>
-                    <p class="m-0">Designation</p>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Contact Form Section End -->
 
-<!-- inicio de mensajes de whatssap -->
-<div class="whatsapp-contact">
-    <div class="contact-form">
-        <h2>Contacto</h2>
-        <form id="contactForm">
-            <input type="email" name="email" placeholder="Tu correo electrónico" required>
-            <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <div id="respuesta"></div>
+    <!-- Locations Section Start -->
+    <div class="locations-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nuestras Ubicaciones</h2>
+                <p>Encuentra nuestras oficinas y sucursales en todo Bolivia</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="location-card">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>La Paz - El Alto
+                        </h5>
+                        <p class="mb-3">Av. del Policía 553, Edificio Montenegro, 2do Piso - Ciudad Satélite</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps?q=Av.%20del%20Polic%C3%ADa%20553%2C%20Edificio%20Montenegro%2C%20Ciudad%20Satelite%2C%20El%20Alto%2C%20Bolivia&output=embed"
+                                style="border:0; width: 100%; height: 200px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="location-card">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Oruro
+                        </h5>
+                        <p class="mb-3">Calle Pagador 6338 entre Calles Murguia y Aldaa, Edificio Cámara de Minería, 2do piso</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps?q=Calle%20Pagador%206338%2C%20Oruro%2C%20Bolivia&output=embed"
+                                style="border:0; width: 100%; height: 200px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="location-card">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Trinidad
+                        </h5>
+                        <p class="mb-3">Calle 18 de noviembre esquina calle La Paz Nro. 113, 2do piso</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps?q=Calle%2018%20de%20noviembre%20esquina%20La%20Paz%2C%20Trinidad%2C%20Bolivia&output=embed"
+                                style="border:0; width: 100%; height: 200px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="location-card">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Santa Cruz
+                        </h5>
+                        <p class="mb-3">Av. San Martín 1300, Santa Cruz de la Sierra</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps?q=Av.%20San%20Mart%C3%ADn%201300%2C%20Santa%20Cruz%20de%20la%20Sierra%2C%20Bolivia&output=embed"
+                                style="border:0; width: 100%; height: 200px;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <!-- Locations Section End -->
 
-<style>
-    .whatsapp-contact {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        background-color: transparent;
-    }
-    .whatsapp-contact .contact-form {
-        background: linear-gradient(to bottom, #87bf28, #00649f);
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        width: 100%;
-        max-width: 600px;
-        color: white;
-        text-align: center;
-    }
-    .whatsapp-contact .contact-form h2 {
-        margin-bottom: 20px;
-    }
-    .whatsapp-contact .contact-form input,
-    .whatsapp-contact .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 5px;
-    }
-    .whatsapp-contact .contact-form input:focus,
-    .whatsapp-contact .contact-form textarea:focus {
-        outline: none;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-    .whatsapp-contact .contact-form button {
-        background-color: #ffffff;
-        color: #00649f;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
-    .whatsapp-contact .contact-form button:hover {
-        background-color: #d1d1d1;
-    }
-</style>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-
-    fetch('http://localhost:5000/enviar', {
-        method: 'POST',
-        body: data
-    })
-    .then(response => response.text())
-    .then(msg => {
-        document.getElementById('respuesta').innerHTML = msg;
-        form.reset(); // Borra los campos del formulario
-    })
-    .catch(err => {
-        document.getElementById('respuesta').innerHTML = 'Error al enviar el mensaje.';
-    });
-});
-</script>
-
-<!-- fin de menajes de whatssap -->
-
-
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+        <a href="https://wa.me/qr/FES7G2BMQZTPM1" target="_blank" class="floating-btn" title="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 py-4 px-sm-3 px-lg-5" style="margin-top: 90px; padding-bottom: 20px;">
+    <div class="container-fluid bg-dark text-white-50 py-4 px-sm-3 px-lg-5" style="margin-top: 30px; padding-bottom: 20px;">
         <div class="row pt-4">
             <div class="col-lg-3 col-md-6 mb-4">
                 <a href="" class="navbar-brand">
@@ -417,10 +312,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="text-white text-uppercase mb-3" style="letter-spacing: 3px;">Nuestros Servicios</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonios</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                    <a class="text-white-50 mb-2" href="contact.html#ubicaciones"><i class="fa fa-angle-right mr-2"></i>Sucursales</a>
+                    <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white-50 mb-2" href="service.html#clientes"><i class="fa fa-angle-right mr-2"></i>Clientes</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
@@ -432,12 +327,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
                     <a class="text-primary px-3" href="https://wa.me/qr/FES7G2BMQZTPM1">
                         WhatsApp <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a class="text-primary px-3" href="">
-                        Instagram <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary pl-3" href="">
-                        YouTube <i class="fab fa-youtube"></i>
-                    </a>
+                    <a class="text-primary px-3" href="">YouTube <i class="fab fa-youtube"></i></a>
+                    <a class="text-primary px-3" href="">TikTok <i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
@@ -458,13 +349,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             </div>
         </div>
     </div>
-    
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -481,6 +369,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- JavaScript específico del contact -->
+    <script src="js/contact-form.js"></script>
 </body>
 
 </html>
